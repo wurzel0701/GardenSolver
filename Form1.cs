@@ -31,6 +31,20 @@ namespace GardenSolver
                 timer.Stop();
             }
         }
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            if (isRunning)
+            {
+                timer.Stop();
+                InitSolve(ref mainGraph);
+                timer.Start();
+            }
+            else
+            {
+                InitSolve(ref mainGraph);
+                Invalidate();
+            }
+        }
 
         public Form1()
         {
