@@ -61,7 +61,11 @@ namespace GardenSolver
 
             foreach (var node in mainGraph.nodes)
             {
-                g.FillEllipse(Brushes.Blue, new RectangleF(node.Pos.mul(scale), new SizeF(node.size, node.size) * scale / 10));
+                var p = node.Pos.mul(scale);
+                var nodeScale = node.size * scale / 10;
+                g.FillEllipse(Brushes.Blue, new RectangleF(p, new SizeF(nodeScale, nodeScale)));
+                var t = TextRenderer.MeasureText(node.name, Font);
+                TextRenderer.DrawText(g, node.name, Font, new Point((int)(p.X - (t.Width / 2) + (nodeScale / 2)), (int)(p.Y + 10)), Color.Black);
             }
         }
     }
