@@ -3,7 +3,11 @@ namespace GardenSolver
     using static Program;
     public partial class Form1 : Form
     {
-        private void Button1_Click(object sender, EventArgs e) => Solve(ref mainGraph);
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Solve(ref mainGraph);
+            Invalidate();
+        }
         public Form1()
         {
             Paint += new PaintEventHandler(DrawNodesPaintHandler);

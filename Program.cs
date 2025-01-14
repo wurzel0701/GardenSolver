@@ -78,7 +78,7 @@ namespace GardenSolver
                 for (int j = 0; i < graph.nodes.Count; i++)
                 {
                     Node node2 = graph.nodes[j];
-                    node.Pos = node.Pos.add(node2.Pos.sub(node.Pos).mul(-0.01f));
+                    node.Pos = node.Pos.add(node2.Pos.sub(node.Pos).mul(-0.02f));
                 }
             }
         }

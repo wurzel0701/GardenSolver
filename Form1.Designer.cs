@@ -6,7 +6,7 @@
         ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button1 = new System.Windows.Forms.Button();
 
         /// <summary>
         ///  Clean up any resources being used.
@@ -29,12 +29,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button1.Click += Button1_Click;
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((AnchorStyles.Top | AnchorStyles.Right)));
-            this.button1.Location = new Point(700, 50);
+            this.button1.Click += new(Button1_Click);
+            this.button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            this.button1.Location = new Point(200,0);
             this.button1.Size = new Size(50, 25);
             this.button1.Text = "sovle";
+            this.button1.Name = "sovle";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.TabIndex = 0;
+            this.button1.Visible = true;
+            this.button1.BringToFront();
 
 
             this.Controls.Add(this.button1);
@@ -43,6 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "Form1";
+            PerformLayout();
         }
 
 
