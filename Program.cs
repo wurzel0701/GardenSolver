@@ -15,7 +15,6 @@ namespace GardenSolver
         }
 
         public static SizeF Planter = new(5, 1.2f);
-        static float scale = 1;
         public static Graph mainGraph = new();
 
         public static void AddEdges(ref Graph graph, List<Edge> edges)
@@ -66,23 +65,51 @@ namespace GardenSolver
 
         public static void Solve(ref Graph graph)
         {
+            PointF[] newPositions = new PointF[graph.nodes.Count];
+            for (int i = 0; i < graph.nodes.Count; i++)
+            {
+                newPositions[i] = graph.nodes[i].Pos;
+            }
+
             for (int i = 0; i < graph.edges.Count; i++)
             {
                 Edge edge = graph.edges[i];
-                edge.plant1.Pos = edge.plant1.Pos.add(edge.plant2.Pos.sub(edge.plant1.Pos).mul(edge.weight * (Planter.Width / graph.nodes.Count) * scale));
+                var diff = edge.plant2.Pos.sub(edge.plant1.Pos);
+                var node1Index = graph.nodes.IndexOf(edge.plant1);
+                var node2Index = graph.nodes.IndexOf(edge.plant2);
+
+                float spacer = 1 / MathF.Sqrt(diff.mag());
+                spacer = 0.01f;
+                newPositions[node1Index] = newPositions[node1Index].add(diff.mul(edge.weight * spacer));
+                newPositions[node2Index] = newPositions[node2Index].add(diff.mul(edge.weight * -spacer));
+            }
+            for (int i = 0; i < graph.nodes.Count; i++)
+            {
+                Node node = graph.nodes[i];
+                if (i == graph.nodes.Count - 1)
+                {
+                    continue;
+                }
+                for (int j = i + 1; j < graph.nodes.Count; j++)
+                {
+                    Node node2 = graph.nodes[j];
+
+                    PointF diff1 = node2.Pos.sub(node.Pos);
+
+                    if (diff1.mag() < 2)
+                    {
+                        float spacer = 1f / MathF.Pow(diff1.mag(), 2f);
+                        spacer /= 100;
+
+                        newPositions[i] = newPositions[i].add(diff1.mul(-spacer));
+                        newPositions[j] = newPositions[j].add(diff1.mul(spacer));
+                    }
+                }
             }
 
             for (int i = 0; i < graph.nodes.Count; i++)
             {
-                Node node = graph.nodes[i];
-                for (int j = 0; i < graph.nodes.Count; i++)
-                {
-                    Node node2 = graph.nodes[j];
-                    if (i != j)
-                    {
-                        node.Pos = node.Pos.add(node2.Pos.sub(node.Pos).mul(-0.03f));
-                    }
-                }
+                graph.nodes[i].Pos = newPositions[i];
             }
         }
 
@@ -94,6 +121,8 @@ namespace GardenSolver
         public static PointF div(this PointF a, float b) => new(a.X / b, a.Y / b);
         public static PointF add(this PointF a, float b) => new(a.X + b, a.Y + b);
         public static PointF sub(this PointF a, float b) => new(a.X - b, a.Y - b);
+
+        public static float mag(this PointF a) => MathF.Sqrt(a.X * a.X + a.Y * a.Y);
 
         public class Edge
         {
@@ -120,7 +149,9 @@ namespace GardenSolver
                 this.name = name;
             }
 
-            public PointF Pos { get { return _pos; } set { _pos = new(MathF.Min(Planter.Width, value.X), MathF.Min(Planter.Height, value.Y)); } }
+            public PointF Pos { get { return _pos; } set { _pos = new(MathF.Max(0, MathF.Min(Planter.Width, value.X)), MathF.Max(0, MathF.Min(Planter.Height, value.Y))); } }
+
+            public override string ToString() => name + " {" + Pos.X + ";" + Pos.Y + "}";
         }
 
         public class Graph
