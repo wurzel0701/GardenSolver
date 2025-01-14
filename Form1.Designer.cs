@@ -32,7 +32,7 @@
             this.button1.Click += new(Button1_Click);
             this.button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             this.button1.Location = new Point(200,0);
-            this.button1.Size = new Size(50, 25);
+            this.button1.Size = new Size(80, 30);
             this.button1.Text = "sovle";
             this.button1.Name = "sovle";
             this.button1.UseVisualStyleBackColor = true;
