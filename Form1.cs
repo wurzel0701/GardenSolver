@@ -1,6 +1,7 @@
 namespace GardenSolver
 {
     using System.Timers;
+    using static GardenSolver.Program;
     using static Program;
     public partial class Form1 : Form
     {
@@ -66,10 +67,28 @@ namespace GardenSolver
             Node Kohl = new("Kohl");
             Node Lauch = new("Lauch");
 
+            List<Node> nodes =
+            [
+                Gurke,
+                Gurke2,
+                Gurke3,
+                Gurke4,
+                Gurke5,
+                Kartoffel,
+                Mais,
+                Papikra,
+                Tomate,
+                Zucchini,
+                Süßkartoffel,
+                Aubergine,
+                Kohl,
+                Lauch
+            ];
+
             List<Edge> edges =
             [
                 new(Gurke, Kartoffel, -1),
-                new(Gurke, Mais, 1),
+                new(Gurke, Mais, 4),
                 new(Gurke, Papikra, 1),
                 new(Gurke, Tomate, -1),
                 new(Gurke, Zucchini, -1),
@@ -98,6 +117,7 @@ namespace GardenSolver
             ];
 
             AddEdges(ref mainGraph, edges);
+            AddNodes(ref mainGraph, nodes);
             NormalizeSizes(10, ref mainGraph);
             InitSolve(ref mainGraph);
         }
@@ -115,6 +135,8 @@ namespace GardenSolver
             float scale = 100f;
 
             g.DrawRectangle(new Pen(Pens.BurlyWood.Color, 5), new RectangleF(origin.sub(new PointF(1, 1)), (Planter * scale) + new SizeF(15, 15)));
+            TextRenderer.DrawText(g, Planter.Width + "m", Font, new Point((int)(Planter.Width * scale) / 2 + (int)origin.X, -20 + (int)origin.Y), Color.Black);
+            TextRenderer.DrawText(g, Planter.Height + "m", Font, new Point((int)(Planter.Width * scale) + 20 + (int)origin.X, (int)((Planter.Height * scale / 2) - 5) + (int)origin.Y), Color.Black);
 
             foreach (var node in mainGraph.nodes)
             {

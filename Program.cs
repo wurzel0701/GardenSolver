@@ -32,6 +32,16 @@ namespace GardenSolver
                 }
             }
         }
+        public static void AddNodes(ref Graph graph, List<Node> nodes)
+        {
+            foreach (var node in nodes)
+            {
+                if (!graph.nodes.Contains(node))
+                {
+                    graph.nodes.Add(node);
+                }
+            }
+        }
 
         public static void NormalizeSizes(float totalSize, ref Graph graph)
         {
@@ -99,7 +109,7 @@ namespace GardenSolver
                     if (diff1.mag() < 2)
                     {
                         float spacer = 1f / MathF.Pow(diff1.mag(), 2f);
-                        spacer /= 100;
+                        spacer /= 110;
 
                         newPositions[i] = newPositions[i].add(diff1.mul(-spacer));
                         newPositions[j] = newPositions[j].add(diff1.mul(spacer));
