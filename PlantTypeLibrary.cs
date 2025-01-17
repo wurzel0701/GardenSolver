@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-
-namespace GardenSolver
+﻿namespace GardenSolver
 {
     internal class PlantTypeLibrary
     {
@@ -30,7 +23,7 @@ namespace GardenSolver
             AllPlants.Add(new PlantType("Erbse", PlantFamilyEnum.LEG, NutritionRequirementsEnum.LOW, new List<string>() { "Dill", "Fenchel", "Gurke", "Kohl", "Blattkohl", "Kohlrabi", "Kopfsalat", "Mais", "Paprika", "Radieschen", "Rettich", "Ringelblume", "Rote Bete", "Zucchine"}, new List<string>() { "Möhre" }, new List<string>() { "Ackerbohne", "Buschbohne", "Kartoffel", "Knoblauch", "Lauch", "Mangold", "Stangenbohne", "Tomate", "Zwiebel" }));
             AllPlants.Add(new PlantType("Erdbeere", PlantFamilyEnum.ROS, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Borretsch", "Buschbohne", "Kopfsalat", "Petersilie", "Radieschen", "Rettich", "Rote Bete", "Spinat" }, new List<string>() { "Zwiebel", "Knoblauch", "Tagetes", "Schnittlauch", "Lauch", "Feldsalat" }, new List<string>() { "Kohl", "Blattkohl" }));
             AllPlants.Add(new PlantType("Feldsalat", PlantFamilyEnum.GEI, NutritionRequirementsEnum.LOW, new List<string>() { "Endivie", "Erdbeere", "Fenchel", "Kohl", "Blattkohl", "Kohlrabi", "Radieschen", "Ringelblume", "Lauch", "Stangenbohne", "Zwiebel" }, new List<string>() {  }, new List<string>() { "Baldrian" }));
-            AllPlants.Add(new PlantType("Fenchel", PlantFamilyEnum.DOL, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Chicorée", "Endivie", "Erbse", "Feldsalat", "Gurke", "Kopfsalat", "Pflücksalat", "Radicchio", "Salbei" }, new List<string>() { "Feldsalat" }, new List<string>() { "Dill", "Buschbohne", "Kümmel", "Stangenbohne", "Tomate" }));
+            AllPlants.Add(new PlantType("Fenchel", PlantFamilyEnum.DOL, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Chicorée", "Endivie", "Erbse", "Gurke", "Kopfsalat", "Pflücksalat", "Radicchio", "Salbei" }, new List<string>() { "Feldsalat" }, new List<string>() { "Dill", "Buschbohne", "Kümmel", "Stangenbohne", "Tomate" }));
             AllPlants.Add(new PlantType("Futterrübe", PlantFamilyEnum.GAE, NutritionRequirementsEnum.HIGH, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Getreide", PlantFamilyEnum.GRA, NutritionRequirementsEnum.MEDIUM, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Gurke", PlantFamilyEnum.KÜR, NutritionRequirementsEnum.HIGH, new List<string>() { "Buschbohne", "Dill", "Erbse", "Fenchel", "Knoblauch", "Kohl", "Blattkohl", "Kopfsalat", "Koriander", "Kümmel", "Lauch", "Mais", "Paprika", "Ringelblume", "Rote Bete", "Sellerie", "Stangenbohne", "Zwiebel" }, new List<string>() { "Basilikum", "Borretsch" }, new List<string>() { "Kartoffel", "Kürbis", "Radieschen", "Rettich", "Tomate", "Zucchini"}));
@@ -41,7 +34,7 @@ namespace GardenSolver
             AllPlants.Add(new PlantType("Kerbl", PlantFamilyEnum.DOL, NutritionRequirementsEnum.MEDIUM, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Klee", PlantFamilyEnum.LEG, NutritionRequirementsEnum.LOW, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Knoblauch", PlantFamilyEnum.LIL, NutritionRequirementsEnum.LOW, new List<string>() { "Dill", "Erdbeere", "Gurke", "Himbeere", "Kartoffel", "Möhre", "Petersilie", "Rote Bete", "Feldsalat", "Pflücksalat", "Kopfsalat", "Eisbergsalat", "Tomate" }, new List<string>() { }, new List<string>() { "Buschbohne", "Erbse", "Kohl", "Lauch", "Stangenbohne", "Zwiebel"}));
-            AllPlants.Add(new PlantType("Kohl", PlantFamilyEnum.KRE, NutritionRequirementsEnum.HIGH, new List<string>() { "Ackerbohne", "Beifuß", "Endivie", "Erbse", "Gurke", "Kamille", "Koriander", "Kümmel", "Mangold", "Minze", "Pastinake", "Radicchio", "Radieschen", "Rettich", "Rhabarber", "Rote Bete", "Sellerie", "Spinat", "Stangenbohne", "Tomate"}, new List<string>() { "Eberraute", "Rosmarin", "Salbei", "Sellerie", "Tomate", "Basilikum", "Dill", "Ringelblume", "Tagetes", "Tomate", "Feldsalat", "Pflücksalat", "Kopfsalat", "Eisbergsalat", "Kartoffel", "Buschbohne", "Lauch", "Thymian", "Ysop", "Minze" }, new List<string>() { "Erdbeere", "Knoblauch", "Zwiebel", "Senf", "Chinakohl" }));
+            AllPlants.Add(new PlantType("Kohl", PlantFamilyEnum.KRE, NutritionRequirementsEnum.HIGH, new List<string>() { "Ackerbohne", "Beifuß", "Endivie", "Erbse", "Gurke", "Kamille", "Koriander", "Kümmel", "Mangold", "Pastinake", "Radicchio", "Radieschen", "Rettich", "Rhabarber", "Rote Bete", "Spinat", "Stangenbohne"}, new List<string>() { "Eberraute", "Rosmarin", "Salbei", "Sellerie", "Tomate", "Basilikum", "Dill", "Ringelblume", "Tagetes", "Tomate", "Feldsalat", "Pflücksalat", "Kopfsalat", "Eisbergsalat", "Kartoffel", "Buschbohne", "Lauch", "Thymian", "Ysop", "Minze" }, new List<string>() { "Erdbeere", "Knoblauch", "Zwiebel", "Senf", "Chinakohl" }));
             AllPlants.Add(new PlantType("Kohlrabi", PlantFamilyEnum.KRE, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Buschbohne", "Erbse", "Kartoffel", "Lauch", "Radieschen", "Rettich", "Rote Bete", "Schwarzwurzel", "Sellerie", "Spargel", "Stangenbohne", "Tomate"}, new List<string>() { "Feldsalat", "Kopfsalat", "Spinat" }, new List<string>() { "Chinakohl"}));
             AllPlants.Add(new PlantType("Kopfsalat", PlantFamilyEnum.KOR, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Buschbohne", "Chicorée", "Dill", "Erbse", "Erdbeere", "Fenchel", "Gurke", "Kerbel", "Blattkohl", "Kohl", "Kohlrabi", "Kresse", "Lauch", "Mais", "Mangold", "Minze", "Möhre", "Pastinake", "Radieschen", "Rettich", "Rote Bete", "Schwarzwurzel", "Spargel", "Spinat", "Stangenbohne", "Tomate", "Zichorien", "Zwiebel"}, new List<string>() { }, new List<string>() { "Petersilie", "Sellerie" }));
             AllPlants.Add(new PlantType("Koriander", PlantFamilyEnum.DOL, NutritionRequirementsEnum.LOW, new List<string>() { }, new List<string>() { }, new List<string>() { }));
@@ -59,7 +52,7 @@ namespace GardenSolver
             AllPlants.Add(new PlantType("Melisse", PlantFamilyEnum.LIP, NutritionRequirementsEnum.LOW, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Melone", PlantFamilyEnum.KÜR, NutritionRequirementsEnum.HIGH, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Minze", PlantFamilyEnum.LIP, NutritionRequirementsEnum.HIGH, new List<string>() { "Kartoffel", "Kohl", "Blattkohl", "Kopfsalat", "Pflücksalat", "Feldsalat", "Eisbergsalat", "Möhre", "Tomate" }, new List<string>() { }, new List<string>() { }));
-            AllPlants.Add(new PlantType("Möhre", PlantFamilyEnum.DOL, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Buschbohne", "Chicorée", "Chinakohl", "Endivie", "Erbse", "Knoblauch", "Kopfsalat", "Lauch", "Mangold", "Minze", "Radieschen", "Rettich", "Salat", "Schwarzwurzel", "Tomate", "Zichorie", "Zucchini", "Zwiebel" }, new List<string>() { "Rosmarin", "Salbei", "Zwiebel", "Dill", "Schnittlauch" }, new List<string>() { "Pastinake", "Rote Bete", "Petersilie", "Sellerie" }));
+            AllPlants.Add(new PlantType("Möhre", PlantFamilyEnum.DOL, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Buschbohne", "Chicorée", "Chinakohl", "Endivie", "Erbse", "Knoblauch", "Kopfsalat", "Lauch", "Mangold", "Minze", "Radieschen", "Rettich", "Salat", "Schwarzwurzel", "Tomate", "Zichorie", "Zucchini" }, new List<string>() { "Rosmarin", "Salbei", "Zwiebel", "Dill", "Schnittlauch" }, new List<string>() { "Pastinake", "Rote Bete", "Petersilie", "Sellerie" }));
             AllPlants.Add(new PlantType("Pastinake", PlantFamilyEnum.DOL, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Kohl", "Lauch", "Rote Bete", "Salat", "Spinat" }, new List<string>() { }, new List<string>() { "Fenchel", "Möhre", "Petersilie", "Sellerie" }));
             AllPlants.Add(new PlantType("Paprika", PlantFamilyEnum.NAC, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Kapuzinerkresse", "Ringelblume" }, new List<string>() { }, new List<string>() { "Kartofeel" }));
             AllPlants.Add(new PlantType("Peperoni", PlantFamilyEnum.NAC, NutritionRequirementsEnum.HIGH, new List<string>() { "Basilikum" }, new List<string>() { }, new List<string>() { "Aubergine", "Tomate", "Kartoffel" }));
@@ -86,7 +79,25 @@ namespace GardenSolver
             AllPlants.Add(new PlantType("Senf", PlantFamilyEnum.KRE, NutritionRequirementsEnum.LOW, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Sojabohne", PlantFamilyEnum.LEG, NutritionRequirementsEnum.MEDIUM, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Sonnenblume", PlantFamilyEnum.KOR, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Gurke" }, new List<string>() { }, new List<string>() { "Kartoffeln" }));
-            AllPlants.Add(new PlantType("Spargel", PlantFamilyEnum.KOR, NutritionRequirementsEnum.MEDIUM, new List<string>() { }, new List<string>() { }, new List<string>() { }));
+            AllPlants.Add(new PlantType("Spargel", PlantFamilyEnum.SPA, NutritionRequirementsEnum.HIGH, new List<string>() { "Gurke", "Kopfsalat", "Petersilie", "Pflücksalat" }, new List<string>() { "Tomate" }, new List<string>() { "Knoblauch", "Zwiebeln"}));
+            AllPlants.Add(new PlantType("Spinat", PlantFamilyEnum.GAE, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Ackerbohne", "Buschbohne", "Chinakohl", "Erdbeere", "Kartoffel", "Kohl", "Kohlrabi", "Kopfsalat", "Pastinake", "Radieschen", "Rettich", "Sellerie", "Stangenbohne", "Tomate", "Zucchini" }, new List<string>() { }, new List<string>() { "Mangold", "Rote Bete"}));
+            AllPlants.Add(new PlantType("Stachelgurke", PlantFamilyEnum.NAC, NutritionRequirementsEnum.HIGH, new List<string>() { }, new List<string>() { }, new List<string>() { }));
+            AllPlants.Add(new PlantType("Stangenbohne", PlantFamilyEnum.LEG, NutritionRequirementsEnum.LOW, new List<string>() { "Chicorée", "Endivie", "Gurke", "Kohl", "Kohlrabi", "Kopfsalat", "Radicchio", "Radieschen", "Rettich", "Sellerie", "Spinat", "Zucchini" }, new List<string>() { "Tagetes", "Bohnenkraut", "Feldsalat"}, new List<string>() { "Erbse", "Fenchel", "Knoblauch", "Lauch"}));
+            AllPlants.Add(new PlantType("Tabak", PlantFamilyEnum.NAC, NutritionRequirementsEnum.HIGH, new List<string>() { }, new List<string>() { }, new List<string>() { }));
+            AllPlants.Add(new PlantType("Tagetes", PlantFamilyEnum.KOR, NutritionRequirementsEnum.MEDIUM, new List<string>() { }, new List<string>() { }, new List<string>() { }));
+            AllPlants.Add(new PlantType("Thymian", PlantFamilyEnum.LIP, NutritionRequirementsEnum.LOW, new List<string>() { }, new List<string>() { }, new List<string>() { }));
+            AllPlants.Add(new PlantType("Tomate", PlantFamilyEnum.NAC, NutritionRequirementsEnum.HIGH, new List<string>() { "Buschbohne", "Chicorée", "Kapuzinerkresse", "Knoblauch", "Kohl", "Kohlrabi", "Kopfsalat", "Lauch", "Mais", "Minze", "Möhre", "Petersilie", "Pflücksalat", "Radieschen", "Rettich", "Rote Bete", "Sellerie", "Spinat", "Zichorie", "Zwiebel" }, new List<string>() { "Basilikum", "Tagetes", "Spargel"}, new List<string>() { "Erbse", "Fenchel", "Gurke", "Kartoffel"}));
+            AllPlants.Add(new PlantType("Tomatillo", PlantFamilyEnum.NAC, NutritionRequirementsEnum.HIGH, new List<string>() { }, new List<string>() { }, new List<string>() { }));
+            AllPlants.Add(new PlantType("Wicken", PlantFamilyEnum.LEG, NutritionRequirementsEnum.LOW, new List<string>() { }, new List<string>() { }, new List<string>() { }));
+            AllPlants.Add(new PlantType("Zichorie", PlantFamilyEnum.KOR, NutritionRequirementsEnum.MEDIUM, new List<string>() { "Fenchel", "Kopfsalat", "Möhre", "Stangenbohne", "Tomate" }, new List<string>() { }, new List<string>() { }));
+            AllPlants.Add(new PlantType("Zucchini", PlantFamilyEnum.KÜR, NutritionRequirementsEnum.HIGH, new List<string>() { "Buschbohne", "Dill", "Erbse", "Kapuzinerkresse", "Lauch", "Mais", "Möhre", "Petersilie", "Radieschen", "Rettich", "Rote Bete", "Kopfsalat", "Spinat", "Sellerie", "Stangenbohne", "Zwiebel" }, new List<string>() { "Borretsch" }, new List<string>() { "Gurke", "Kürbis" }));
+            AllPlants.Add(new PlantType("Zwiebel", PlantFamilyEnum.LIL, NutritionRequirementsEnum.LOW, new List<string>() { "Bohnenkraut", "Dill", "Erdbeere", "Gurke", "Kamille", "Kopfsalat", "Petersilie", "Rote Bete", "Schwarzwurzel", "Tomate", "Zichorie", "Zucchini" }, new List<string>() { "Möhre", "Feldsalat"}, new List<string>() { "Buschbohne", "Erbse", "Kohl", "Knoblauch", "Rettich", "Stangenbohne"}));
+
+            foreach (var item in AllPlants) 
+            {
+                item.ValidateInternal();
+            }
+        
         }
     }
 }

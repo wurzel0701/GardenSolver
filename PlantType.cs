@@ -34,13 +34,13 @@
             {
                 if (PerfectNeighbours.Contains(good)) 
                 {
-                    Console.WriteLine(good + " is sorted into good and perfect neighbours, can only be one");
+                    Console.WriteLine(PlantName + ": " + good + " is sorted into good and perfect neighbours, can only be one");
                     return false;
                 }
 
                 if (BadNeighbours.Contains(good))
                 {
-                    Console.WriteLine(good + " is sorted into good and bad neighbours, can only be one");
+                    Console.WriteLine(PlantName + ": " + good + " is sorted into good and bad neighbours, can only be one");
                     return false; 
                 }
             }
@@ -49,7 +49,7 @@
             {
                 if (PerfectNeighbours.Contains(bad))
                 {
-                    Console.WriteLine(bad + " is sorted into perfect and bad neighbours, can only be one");
+                    Console.WriteLine(PlantName + ": " + bad + " is sorted into perfect and bad neighbours, can only be one");
                     return false;
                 }
             }
