@@ -1,6 +1,6 @@
 ﻿namespace GardenSolver
 {
-    internal enum PlantFamilyEnum { UNSET, DOL, FUC, GAE, GEI, GRA, KNO, KOR, KRE, KÜR, LEG, LIL, LIP, NAC, RAU, ROS, SPA };
+    internal enum PlantFamilyEnum { UNSET, DOL, FUC, GAE, GEI, GRA, KNO, KOR, KRE, KÜR, LEG, LIL, LIP, NAC, RAU, ROS, SPA, TRO };
 
     internal enum NutritionRequirementsEnum { UNSET, LOW, MEDIUM, HIGH };
 
