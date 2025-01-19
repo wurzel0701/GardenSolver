@@ -134,9 +134,9 @@ namespace GardenSolver
             Graphics g = e.Graphics;
             float scale = 100f;
 
-            g.DrawRectangle(new Pen(Pens.BurlyWood.Color, 5), new RectangleF(origin.sub(new PointF(1, 1)), (Planter * scale) + new SizeF(15, 15)));
-            TextRenderer.DrawText(g, Planter.Width + "m", Font, new Point((int)(Planter.Width * scale) / 2 + (int)origin.X, -20 + (int)origin.Y), Color.Black);
-            TextRenderer.DrawText(g, Planter.Height + "m", Font, new Point((int)(Planter.Width * scale) + 20 + (int)origin.X, (int)((Planter.Height * scale / 2) - 5) + (int)origin.Y), Color.Black);
+            g.DrawRectangle(new Pen(Pens.BurlyWood.Color, 5), new RectangleF(origin.sub(new PointF(1, 1)), (PlanterTest * scale) + new SizeF(15, 15)));
+            TextRenderer.DrawText(g, PlanterTest.Width + "m", Font, new Point((int)(PlanterTest.Width * scale) / 2 + (int)origin.X, -20 + (int)origin.Y), Color.Black);
+            TextRenderer.DrawText(g, PlanterTest.Height + "m", Font, new Point((int)(PlanterTest.Width * scale) + 20 + (int)origin.X, (int)((PlanterTest.Height * scale / 2) - 5) + (int)origin.Y), Color.Black);
 
             foreach (var node in mainGraph.nodes)
             {

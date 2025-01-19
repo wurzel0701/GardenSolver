@@ -11,11 +11,17 @@ namespace GardenSolver
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             PlantTypeLibrary ptl = new PlantTypeLibrary();
+            Planter planter1 = new Planter(NutritionRequirementsEnum.LOW);
+            planter1.SetChoosenPlantTypes(new List<string>() { "Buschbohne", "Erbse", "Knoblauch", "Schnittlauch", "Petersilie", "Rosmarin", "Basilikum", "Thymian" });
+            Planter planter2 = new Planter(NutritionRequirementsEnum.MEDIUM);
+            planter2.SetChoosenPlantTypes(new List<string>() { "Möhre", "Salat", "Tomatillo", "Rote Bete", "Spinat", "Kohlrabi", "Zwiebel" });
+            Planter planter3 = new Planter(NutritionRequirementsEnum.HIGH);
+            planter3.SetChoosenPlantTypes(new List<string>() { "Gurke", "Kartoffel", "Mais", "Paprika", "Tomate", "Zucchini", "Aubergine", "Kohl", "Lauch" /*, "Süßkartoffel" */ });
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
 
-        public static SizeF Planter = new(5, 1.2f);
+        public static SizeF PlanterTest = new(5, 1.2f);
         public static Graph mainGraph = new();
 
         public static void AddEdges(ref Graph graph, List<Edge> edges)
@@ -70,7 +76,7 @@ namespace GardenSolver
             for (int i = 0; i < graph.nodes.Count; i++)
             {
                 Node node = graph.nodes[i];
-                node.Pos = new PointF((float)Random.Shared.NextDouble() * (float)Planter.Width, (float)Random.Shared.NextDouble() * (float)Planter.Height);
+                node.Pos = new PointF((float)Random.Shared.NextDouble() * (float)PlanterTest.Width, (float)Random.Shared.NextDouble() * (float)PlanterTest.Height);
             }
         }
 
@@ -160,7 +166,7 @@ namespace GardenSolver
                 this.name = name;
             }
 
-            public PointF Pos { get { return _pos; } set { _pos = new(MathF.Max(0, MathF.Min(Planter.Width, value.X)), MathF.Max(0, MathF.Min(Planter.Height, value.Y))); } }
+            public PointF Pos { get { return _pos; } set { _pos = new(MathF.Max(0, MathF.Min(PlanterTest.Width, value.X)), MathF.Max(0, MathF.Min(PlanterTest.Height, value.Y))); } }
 
             public override string ToString() => name + " {" + Pos.X + ";" + Pos.Y + "}";
         }

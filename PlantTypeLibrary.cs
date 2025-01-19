@@ -2,11 +2,17 @@
 {
     internal class PlantTypeLibrary
     {
+        private static PlantTypeLibrary Instance;
+
+        public static List<string> AllPlantTypeNames = new List<string>();
+
         private List<PlantType> AllPlants = new List<PlantType>();
 
         private Dictionary<string, PlantType> PlantLookup = new Dictionary<string, PlantType>();
         public PlantTypeLibrary() 
         {
+            Instance = this;
+
             AllPlants.Add(new PlantType("Ackerbohne", PlantFamilyEnum.LEG, NutritionRequirementsEnum.LOW, new List<string>() { "Dill", "Kartoffel", "Kohl", "Radieschen", "Rettich", "Spinat" }, new List<string>() { }, new List<string>() { "Buschbohne", "Erbse" }));
             AllPlants.Add(new PlantType("Andenbeere", PlantFamilyEnum.NAC, NutritionRequirementsEnum.HIGH, new List<string>() { }, new List<string>() { }, new List<string>() { }));
             AllPlants.Add(new PlantType("Artischocke", PlantFamilyEnum.KOR, NutritionRequirementsEnum.HIGH, new List<string>() { "Fenchel" }, new List<string>() { }, new List<string>() { "Knoblauch", "Schnittlauch", "Sellerie", "Zwiebel" }));
@@ -128,8 +134,47 @@
                         Console.WriteLine(item.PlantName + ": " + bad + " in bad neighbors is not a registered plant");
                     }
                 }
+
+                AllPlantTypeNames.Add(item.PlantName);
             }
         
+        }
+
+        public static short GetPlantRelation(string from, string to) 
+        {
+            if (from == to) 
+            {
+                return 0;
+            }
+
+            if (Instance.PlantLookup.ContainsKey(from)) 
+            {
+                PlantType fromType = Instance.PlantLookup[from];
+
+                if (fromType.GoodNeighbours.Contains(to)) 
+                {
+                    return 1;
+                }
+
+                if (fromType.PerfectNeighbours.Contains(to)) 
+                {
+                    return 2;
+                }
+
+                if (fromType.BadNeighbours.Contains(to)) 
+                {
+                    return -1;
+                }
+
+                return 0;
+            }
+
+            throw new ArgumentException("The given plant type " + from + " is not a registered plant");
+        }
+
+        public static PlantType GetPlantTypeOfName (string plantType)
+        {
+            return Instance.PlantLookup[plantType];
         }
     }
 }
