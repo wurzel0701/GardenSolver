@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema 
+    Microsoft ResX Schema
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -117,90 +117,241 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="treeView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="treeView1.Nodes" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMu
+        VHJlZU5vZGUMAAAABFRleHQLVG9vbFRpcFRleHQETmFtZQlJc0NoZWNrZWQKSW1hZ2VJbmRleAhJbWFn
+        ZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQU2VsZWN0ZWRJbWFnZUtleQpDaGlsZENvdW50CWNoaWxkcmVu
+        MAljaGlsZHJlbjEJY2hpbGRyZW4yAQEBAAABAAEABAQEAQgICB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5U
+        cmVlTm9kZQIAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUCAAAAHVN5c3RlbS5XaW5kb3dz
+        LkZvcm1zLlRyZWVOb2RlAgAAAAIAAAAGAwAAAApBdcOfZW5iZWV0BgQAAAAABgUAAAAHS25vdGVuMAD/
+        ////CQQAAAD/////CQQAAAADAAAACQcAAAAJCAAAAAkJAAAABQcAAAAdU3lzdGVtLldpbmRvd3MuRm9y
+        bXMuVHJlZU5vZGUJAAAABFRleHQLVG9vbFRpcFRleHQETmFtZQlJc0NoZWNrZWQKSW1hZ2VJbmRleAhJ
+        bWFnZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQU2VsZWN0ZWRJbWFnZUtleQpDaGlsZENvdW50AQEBAAAB
+        AAEAAQgICAIAAAAGCgAAAAZCZWV0IDEJBAAAAAYMAAAAB0tub3RlbjIA/////wkEAAAA/////wkEAAAA
+        AAAAAAUIAAAAHVN5c3RlbS5XaW5kb3dzLkZvcm1zLlRyZWVOb2RlCQAAAARUZXh0C1Rvb2xUaXBUZXh0
+        BE5hbWUJSXNDaGVja2VkCkltYWdlSW5kZXgISW1hZ2VLZXkSU2VsZWN0ZWRJbWFnZUluZGV4EFNlbGVj
+        dGVkSW1hZ2VLZXkKQ2hpbGRDb3VudAEBAQAAAQABAAEICAgCAAAABg4AAAAGQmVldCAyCQQAAAAGEAAA
+        AAdLbm90ZW4zAP////8JBAAAAP////8JBAAAAAAAAAAFCQAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5U
+        cmVlTm9kZQkAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4CEltYWdl
+        S2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQEAAAEAAQAB
+        CAgIAgAAAAYSAAAABkJlZXQgMwkEAAAABhQAAAAHS25vdGVuNAD/////CQQAAAD/////CQQAAAAAAAAA
+        Cw==
+</value>
+  </data>
+  <data name="treeView1.Nodes1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMu
+        VHJlZU5vZGUMAAAABFRleHQLVG9vbFRpcFRleHQETmFtZQlJc0NoZWNrZWQKSW1hZ2VJbmRleAhJbWFn
+        ZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQU2VsZWN0ZWRJbWFnZUtleQpDaGlsZENvdW50CWNoaWxkcmVu
+        MAljaGlsZHJlbjEJY2hpbGRyZW4yAQEBAAABAAEABAQEAQgICB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5U
+        cmVlTm9kZQIAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUCAAAAHVN5c3RlbS5XaW5kb3dz
+        LkZvcm1zLlRyZWVOb2RlAgAAAAIAAAAGAwAAAAxHZXfDpGNoc2hhdXMGBAAAAAAGBQAAAAdLbm90ZW4x
+        AP////8JBAAAAP////8JBAAAAAMAAAAJBwAAAAkIAAAACQkAAAAFBwAAAB1TeXN0ZW0uV2luZG93cy5G
+        b3Jtcy5UcmVlTm9kZQkAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4
+        CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQEA
+        AAEAAQABCAgIAgAAAAYKAAAABkZlbGQgMQkEAAAABgwAAAAHS25vdGVuNQD/////CQQAAAD/////CQQA
+        AAAAAAAABQgAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUJAAAABFRleHQLVG9vbFRpcFRl
+        eHQETmFtZQlJc0NoZWNrZWQKSW1hZ2VJbmRleAhJbWFnZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQU2Vs
+        ZWN0ZWRJbWFnZUtleQpDaGlsZENvdW50AQEBAAABAAEAAQgICAIAAAAGDgAAAAZGZWxkIDIJBAAAAAYQ
+        AAAAB0tub3RlbjYA/////wkEAAAA/////wkEAAAAAAAAAAUJAAAAHVN5c3RlbS5XaW5kb3dzLkZvcm1z
+        LlRyZWVOb2RlCQAAAARUZXh0C1Rvb2xUaXBUZXh0BE5hbWUJSXNDaGVja2VkCkltYWdlSW5kZXgISW1h
+        Z2VLZXkSU2VsZWN0ZWRJbWFnZUluZGV4EFNlbGVjdGVkSW1hZ2VLZXkKQ2hpbGRDb3VudAEBAQAAAQAB
+        AAEICAgCAAAABhIAAAAGRmVsZCAzCQQAAAAGFAAAAAdLbm90ZW43AP////8JBAAAAP////8JBAAAAAAA
+        AAAL
+</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 20.25pt</value>
+  <data name="treeView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 595</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 37</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Nährstofftyp</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radioButton8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 20.25pt</value>
+  <data name="radioButton8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="radioButton8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 37</value>
+  <data name="radioButton8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 38</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Größe</value>
+  <data name="radioButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 19</value>
   </data>
-  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="radioButton8.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButton8.Text" xml:space="preserve">
+    <value>Gewächshaus</value>
+  </data>
+  <data name="radioButton9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="radioButton9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 29</value>
+  <data name="radioButton9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
-    <value>Ist überdacht</value>
+  <data name="radioButton9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
   </data>
-  <data name="textBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="radioButton9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 19</value>
+  </data>
+  <data name="radioButton9.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButton9.Text" xml:space="preserve">
+    <value>Außenbeet</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 342</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 71</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Standort</value>
+  </data>
+  <data name="textBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 42</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 33</value>
+    <value>185, 23</value>
   </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>Länge</value>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="textBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 33</value>
+    <value>185, 23</value>
   </data>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>Breite</value>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="comboBoxNutrition.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 203</value>
   </data>
-  <data name="comboBoxNutrition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 33</value>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 83</value>
   </data>
-  <data name="comboBoxNutrition.Text" xml:space="preserve">
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Größe</value>
+  </data>
+  <data name="radioButton3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="radioButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 57</value>
+  </data>
+  <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 19</value>
+  </data>
+  <data name="radioButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="radioButton3.Text" xml:space="preserve">
+    <value>Starkzehrer</value>
+  </data>
+  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="radioButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 38</value>
+  </data>
+  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 19</value>
+  </data>
+  <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>Mittelzehrer</value>
+  </data>
+  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 19</value>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
     <value>Schwachzehrer</value>
   </data>
-  <data name="buttonNewPlanter.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 20.25pt</value>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 73</value>
   </data>
-  <data name="buttonNewPlanter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 56</value>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 98</value>
   </data>
-  <data name="buttonNewPlanter.Text" xml:space="preserve">
-    <value>Neues Beet</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Planzentyp</value>
+  </data>
+  <data name="createButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 481</value>
+  </data>
+  <data name="createButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 41</value>
+  </data>
+  <data name="createButton.Text" xml:space="preserve">
+    <value>Beet erstellen</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1250, 595</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>297</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabDefinePlanter.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabDefinePlanter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 653</value>
+    <value>1256, 601</value>
   </data>
   <data name="tabDefinePlanter.Text" xml:space="preserve">
     <value>Beet definieren</value>
@@ -209,49 +360,79 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPlantTypes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 653</value>
+    <value>1256, 601</value>
   </data>
   <data name="tabPlantTypes.Text" xml:space="preserve">
     <value>Planzenarten</value>
   </data>
   <data name="tabMovePlants.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 653</value>
+    <value>1256, 601</value>
   </data>
   <data name="tabMovePlants.Text" xml:space="preserve">
     <value>Pflanzen schieben</value>
   </data>
   <data name="tabSuggestions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 653</value>
+    <value>1256, 601</value>
   </data>
   <data name="tabSuggestions.Text" xml:space="preserve">
     <value>Empfehlungen</value>
   </data>
   <data name="tabPlants.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 653</value>
+    <value>1256, 601</value>
   </data>
   <data name="tabPlants.Text" xml:space="preserve">
     <value>Sorten eintragen</value>
   </data>
   <data name="tabPlacement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 653</value>
+    <value>1256, 601</value>
   </data>
   <data name="tabPlacement.Text" xml:space="preserve">
     <value>Anbauplan</value>
   </data>
   <data name="tabPrinting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 653</value>
+    <value>1256, 601</value>
   </data>
   <data name="tabPrinting.Text" xml:space="preserve">
     <value>Drucken</value>
   </data>
-  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="tabControl1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 27</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 681</value>
+    <value>1264, 629</value>
+  </data>
+  <data name="toolStripStatusLabel1.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="toolStripProgressBar1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="toolStripProgressBar1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 22</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="debugWindowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
+  <data name="debugWindowToolStripMenuItem.Text" xml:space="preserve">
+    <value>Debug Window</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 24</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1264, 681</value>
