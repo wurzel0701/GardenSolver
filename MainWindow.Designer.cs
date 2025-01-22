@@ -30,10 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             splitContainer1 = new SplitContainer();
-            treeView1 = new TreeView();
+            splitContainer2 = new SplitContainer();
+            label1 = new Label();
+            groupBox3 = new GroupBox();
+            radioButton8 = new RadioButton();
+            radioButton9 = new RadioButton();
+            groupBox2 = new GroupBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             groupBox1 = new GroupBox();
+            radioButton3 = new RadioButton();
+            radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             createButton = new Button();
+            richTextBox1 = new RichTextBox();
             tabControl1 = new TabControl();
             tabDefinePlanter = new TabPage();
             tabPlantTypes = new TabPage();
@@ -48,25 +58,46 @@
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             debugWindowToolStripMenuItem = new ToolStripMenuItem();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
-            groupBox2 = new GroupBox();
-            groupBox3 = new GroupBox();
-            radioButton8 = new RadioButton();
-            radioButton9 = new RadioButton();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            splitContainer3 = new SplitContainer();
+            splitContainer4 = new SplitContainer();
+            listBox1 = new ListBox();
+            listBox2 = new ListBox();
+            splitContainer5 = new SplitContainer();
+            textBox3 = new TextBox();
+            splitContainer6 = new SplitContainer();
+            listBox3 = new ListBox();
+            listBox4 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
+            splitContainer2.Panel1.SuspendLayout();
+            splitContainer2.Panel2.SuspendLayout();
+            splitContainer2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabDefinePlanter.SuspendLayout();
+            tabPlantTypes.SuspendLayout();
             statusStrip1.SuspendLayout();
             menuStrip1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
+            splitContainer3.Panel1.SuspendLayout();
+            splitContainer3.Panel2.SuspendLayout();
+            splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer4).BeginInit();
+            splitContainer4.Panel1.SuspendLayout();
+            splitContainer4.Panel2.SuspendLayout();
+            splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer5).BeginInit();
+            splitContainer5.Panel1.SuspendLayout();
+            splitContainer5.Panel2.SuspendLayout();
+            splitContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer6).BeginInit();
+            splitContainer6.Panel1.SuspendLayout();
+            splitContainer6.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -77,21 +108,76 @@
             // splitContainer1.Panel1
             // 
             resources.ApplyResources(splitContainer1.Panel1, "splitContainer1.Panel1");
-            splitContainer1.Panel1.Controls.Add(treeView1);
+            splitContainer1.Panel1.Controls.Add(listBox4);
             // 
             // splitContainer1.Panel2
             // 
             resources.ApplyResources(splitContainer1.Panel2, "splitContainer1.Panel2");
-            splitContainer1.Panel2.Controls.Add(groupBox3);
-            splitContainer1.Panel2.Controls.Add(groupBox2);
-            splitContainer1.Panel2.Controls.Add(groupBox1);
-            splitContainer1.Panel2.Controls.Add(createButton);
+            splitContainer1.Panel2.Controls.Add(splitContainer2);
             // 
-            // treeView1
+            // splitContainer2
             // 
-            resources.ApplyResources(treeView1, "treeView1");
-            treeView1.Name = "treeView1";
-            treeView1.Nodes.AddRange(new TreeNode[] { (TreeNode)resources.GetObject("treeView1.Nodes"), (TreeNode)resources.GetObject("treeView1.Nodes1") });
+            resources.ApplyResources(splitContainer2, "splitContainer2");
+            splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            resources.ApplyResources(splitContainer2.Panel1, "splitContainer2.Panel1");
+            splitContainer2.Panel1.Controls.Add(label1);
+            splitContainer2.Panel1.Controls.Add(groupBox3);
+            splitContainer2.Panel1.Controls.Add(groupBox2);
+            splitContainer2.Panel1.Controls.Add(groupBox1);
+            splitContainer2.Panel1.Controls.Add(createButton);
+            // 
+            // splitContainer2.Panel2
+            // 
+            resources.ApplyResources(splitContainer2.Panel2, "splitContainer2.Panel2");
+            splitContainer2.Panel2.Controls.Add(richTextBox1);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
+            // 
+            // groupBox3
+            // 
+            resources.ApplyResources(groupBox3, "groupBox3");
+            groupBox3.Controls.Add(radioButton8);
+            groupBox3.Controls.Add(radioButton9);
+            groupBox3.Name = "groupBox3";
+            groupBox3.TabStop = false;
+            // 
+            // radioButton8
+            // 
+            resources.ApplyResources(radioButton8, "radioButton8");
+            radioButton8.Name = "radioButton8";
+            radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            resources.ApplyResources(radioButton9, "radioButton9");
+            radioButton9.Checked = true;
+            radioButton9.Name = "radioButton9";
+            radioButton9.TabStop = true;
+            radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            resources.ApplyResources(groupBox2, "groupBox2");
+            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(textBox1);
+            groupBox2.Name = "groupBox2";
+            groupBox2.TabStop = false;
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(textBox2, "textBox2");
+            textBox2.Name = "textBox2";
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.Name = "textBox1";
             // 
             // groupBox1
             // 
@@ -102,6 +188,18 @@
             groupBox1.Name = "groupBox1";
             groupBox1.TabStop = false;
             // 
+            // radioButton3
+            // 
+            resources.ApplyResources(radioButton3, "radioButton3");
+            radioButton3.Name = "radioButton3";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            resources.ApplyResources(radioButton2, "radioButton2");
+            radioButton2.Name = "radioButton2";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
             // radioButton1
             // 
             resources.ApplyResources(radioButton1, "radioButton1");
@@ -109,13 +207,17 @@
             radioButton1.Name = "radioButton1";
             radioButton1.TabStop = true;
             radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // createButton
             // 
             resources.ApplyResources(createButton, "createButton");
             createButton.Name = "createButton";
             createButton.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            resources.ApplyResources(richTextBox1, "richTextBox1");
+            richTextBox1.Name = "richTextBox1";
             // 
             // tabControl1
             // 
@@ -140,6 +242,7 @@
             // tabPlantTypes
             // 
             resources.ApplyResources(tabPlantTypes, "tabPlantTypes");
+            tabPlantTypes.Controls.Add(splitContainer3);
             tabPlantTypes.Name = "tabPlantTypes";
             tabPlantTypes.UseVisualStyleBackColor = true;
             // 
@@ -206,57 +309,93 @@
             resources.ApplyResources(debugWindowToolStripMenuItem, "debugWindowToolStripMenuItem");
             debugWindowToolStripMenuItem.Name = "debugWindowToolStripMenuItem";
             // 
-            // radioButton2
+            // splitContainer3
             // 
-            resources.ApplyResources(radioButton2, "radioButton2");
-            radioButton2.Name = "radioButton2";
-            radioButton2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(splitContainer3, "splitContainer3");
+            splitContainer3.Name = "splitContainer3";
             // 
-            // radioButton3
+            // splitContainer3.Panel1
             // 
-            resources.ApplyResources(radioButton3, "radioButton3");
-            radioButton3.Name = "radioButton3";
-            radioButton3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(splitContainer3.Panel1, "splitContainer3.Panel1");
+            splitContainer3.Panel1.Controls.Add(listBox2);
             // 
-            // groupBox2
+            // splitContainer3.Panel2
             // 
-            resources.ApplyResources(groupBox2, "groupBox2");
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Name = "groupBox2";
-            groupBox2.TabStop = false;
+            resources.ApplyResources(splitContainer3.Panel2, "splitContainer3.Panel2");
+            splitContainer3.Panel2.Controls.Add(splitContainer4);
             // 
-            // groupBox3
+            // splitContainer4
             // 
-            resources.ApplyResources(groupBox3, "groupBox3");
-            groupBox3.Controls.Add(radioButton8);
-            groupBox3.Controls.Add(radioButton9);
-            groupBox3.Name = "groupBox3";
-            groupBox3.TabStop = false;
+            resources.ApplyResources(splitContainer4, "splitContainer4");
+            splitContainer4.Name = "splitContainer4";
             // 
-            // radioButton8
+            // splitContainer4.Panel1
             // 
-            resources.ApplyResources(radioButton8, "radioButton8");
-            radioButton8.Name = "radioButton8";
-            radioButton8.UseVisualStyleBackColor = true;
+            resources.ApplyResources(splitContainer4.Panel1, "splitContainer4.Panel1");
+            splitContainer4.Panel1.Controls.Add(splitContainer5);
             // 
-            // radioButton9
+            // splitContainer4.Panel2
             // 
-            resources.ApplyResources(radioButton9, "radioButton9");
-            radioButton9.Checked = true;
-            radioButton9.Name = "radioButton9";
-            radioButton9.TabStop = true;
-            radioButton9.UseVisualStyleBackColor = true;
+            resources.ApplyResources(splitContainer4.Panel2, "splitContainer4.Panel2");
+            splitContainer4.Panel2.Controls.Add(listBox1);
             // 
-            // textBox1
+            // listBox1
             // 
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.Name = "textBox1";
+            resources.ApplyResources(listBox1, "listBox1");
+            listBox1.FormattingEnabled = true;
+            listBox1.Name = "listBox1";
             // 
-            // textBox2
+            // listBox2
             // 
-            resources.ApplyResources(textBox2, "textBox2");
-            textBox2.Name = "textBox2";
+            resources.ApplyResources(listBox2, "listBox2");
+            listBox2.FormattingEnabled = true;
+            listBox2.Name = "listBox2";
+            // 
+            // splitContainer5
+            // 
+            resources.ApplyResources(splitContainer5, "splitContainer5");
+            splitContainer5.Name = "splitContainer5";
+            // 
+            // splitContainer5.Panel1
+            // 
+            resources.ApplyResources(splitContainer5.Panel1, "splitContainer5.Panel1");
+            splitContainer5.Panel1.Controls.Add(textBox3);
+            // 
+            // splitContainer5.Panel2
+            // 
+            resources.ApplyResources(splitContainer5.Panel2, "splitContainer5.Panel2");
+            splitContainer5.Panel2.Controls.Add(splitContainer6);
+            // 
+            // textBox3
+            // 
+            resources.ApplyResources(textBox3, "textBox3");
+            textBox3.Name = "textBox3";
+            // 
+            // splitContainer6
+            // 
+            resources.ApplyResources(splitContainer6, "splitContainer6");
+            splitContainer6.Name = "splitContainer6";
+            // 
+            // splitContainer6.Panel1
+            // 
+            resources.ApplyResources(splitContainer6.Panel1, "splitContainer6.Panel1");
+            splitContainer6.Panel1.Controls.Add(listBox3);
+            // 
+            // splitContainer6.Panel2
+            // 
+            resources.ApplyResources(splitContainer6.Panel2, "splitContainer6.Panel2");
+            // 
+            // listBox3
+            // 
+            resources.ApplyResources(listBox3, "listBox3");
+            listBox3.FormattingEnabled = true;
+            listBox3.Name = "listBox3";
+            // 
+            // listBox4
+            // 
+            resources.ApplyResources(listBox4, "listBox4");
+            listBox4.FormattingEnabled = true;
+            listBox4.Name = "listBox4";
             // 
             // MainWindow
             // 
@@ -266,23 +405,47 @@
             Controls.Add(menuStrip1);
             Controls.Add(tabControl1);
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "MainWindow";
+            SizeGripStyle = SizeGripStyle.Hide;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            splitContainer2.Panel1.ResumeLayout(false);
+            splitContainer2.Panel1.PerformLayout();
+            splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
+            splitContainer2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             tabControl1.ResumeLayout(false);
             tabDefinePlanter.ResumeLayout(false);
+            tabPlantTypes.ResumeLayout(false);
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            splitContainer3.Panel1.ResumeLayout(false);
+            splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
+            splitContainer3.ResumeLayout(false);
+            splitContainer4.Panel1.ResumeLayout(false);
+            splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer4).EndInit();
+            splitContainer4.ResumeLayout(false);
+            splitContainer5.Panel1.ResumeLayout(false);
+            splitContainer5.Panel1.PerformLayout();
+            splitContainer5.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer5).EndInit();
+            splitContainer5.ResumeLayout(false);
+            splitContainer6.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer6).EndInit();
+            splitContainer6.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -304,17 +467,28 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem debugWindowToolStripMenuItem;
         private SplitContainer splitContainer1;
-        private TreeView treeView1;
-        private GroupBox groupBox1;
-        private RadioButton radioButton1;
-        private Button createButton;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
+        private SplitContainer splitContainer2;
+        private Label label1;
         private GroupBox groupBox3;
         private RadioButton radioButton8;
         private RadioButton radioButton9;
         private GroupBox groupBox2;
         private TextBox textBox2;
         private TextBox textBox1;
+        private GroupBox groupBox1;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private Button createButton;
+        private RichTextBox richTextBox1;
+        private SplitContainer splitContainer3;
+        private ListBox listBox2;
+        private SplitContainer splitContainer4;
+        private SplitContainer splitContainer5;
+        private TextBox textBox3;
+        private SplitContainer splitContainer6;
+        private ListBox listBox3;
+        private ListBox listBox1;
+        private ListBox listBox4;
     }
 }
