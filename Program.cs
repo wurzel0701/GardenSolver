@@ -17,7 +17,7 @@ namespace GardenSolver
             planter2.SetChoosenPlantTypes(new List<string>() { "Möhre", "Salat", "Tomatillo", "Rote Bete", "Spinat", "Kohlrabi", "Zwiebel" });
             Planter planter3 = new Planter(NutritionRequirementsEnum.HIGH);
             planter3.SetChoosenPlantTypes(new List<string>() { "Gurke", "Kartoffel", "Mais", "Paprika", "Tomate", "Zucchini", "Aubergine", "Kohl", "Lauch" /*, "Süßkartoffel" */ });
-            ApplicationConfiguration.Initialize();
+            ApplicationConfiguration.Initialize();3
             Application.Run(new MainWindow());
         }
 
