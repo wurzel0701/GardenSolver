@@ -18,7 +18,7 @@ namespace GardenSolver
             Planter planter3 = new Planter(NutritionRequirementsEnum.HIGH);
             planter3.SetChoosenPlantTypes(new List<string>() { "Gurke", "Kartoffel", "Mais", "Paprika", "Tomate", "Zucchini", "Aubergine", "Kohl", "Lauch" /*, "Süßkartoffel" */ });
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new SATest());
         }
 
         public static SizeF PlanterTest = new(5, 1.2f);
