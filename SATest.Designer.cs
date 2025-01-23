@@ -29,22 +29,34 @@
         private void InitializeComponent()
         {
             outputBox = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // outputBox
             // 
-            outputBox.Dock = DockStyle.Fill;
+            outputBox.Dock = DockStyle.Top;
             outputBox.Location = new Point(0, 0);
             outputBox.Multiline = true;
             outputBox.Name = "outputBox";
-            outputBox.Size = new Size(800, 450);
+            outputBox.Size = new Size(1431, 716);
             outputBox.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(616, 722);
+            button1.Name = "button1";
+            button1.Size = new Size(202, 35);
+            button1.TabIndex = 1;
+            button1.Text = "Start solving";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // SATest
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1431, 769);
+            Controls.Add(button1);
             Controls.Add(outputBox);
             Name = "SATest";
             Text = "SATest";
@@ -55,5 +67,6 @@
         #endregion
 
         public TextBox outputBox;
+        private Button button1;
     }
 }
