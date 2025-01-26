@@ -16,20 +16,17 @@ namespace GardenSolver
 
         private List<string> m_selectedPlants = new List<string>();
 
+        private List<Planter> m_createdPlanters = new List<Planter> { };
+
         public MainWindow()
         {
             InitializeComponent();
             FillBoxes();
-
+            SetupPlanterList();
         }
 
         private void FillBoxes()
         {
-            listOutside.Items.Clear();
-            listOutside.Items.Add("Neu");
-
-            listGreenhouse.Items.Clear();
-            listGreenhouse.Items.Add("Neu");
 
             listAvailablePlants.Items.Clear();
             //ListViewItem listViewItem;
@@ -81,25 +78,6 @@ namespace GardenSolver
             buttonChoose.Enabled = false;
         }
 
-        private void listOutside_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listOutside.SelectedIndex != -1)
-            {
-                listGreenhouse.SelectedItems.Clear();
-            }
-
-
-        }
-
-        private void listGreenhouse_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listGreenhouse.SelectedIndex != -1)
-            {
-                listOutside.SelectedItems.Clear();
-            }
-
-        }
-
         private void listAvailablePlants_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listAvailablePlants.SelectedIndex != -1)
@@ -143,13 +121,13 @@ namespace GardenSolver
                 listAvailablePlants.Sorted = true;
                 listSelectedPlants.Sorted = true;
             }
-            else 
+            else
             {
                 //Filter for plant
                 listAvailablePlants.Items.Clear();
                 foreach (string plant in m_availablePlants)
                 {
-                    if (plant.ToLower().Contains(filter)) 
+                    if (plant.ToLower().Contains(filter))
                     {
                         listAvailablePlants.Items.Add(plant);
                     }
@@ -158,7 +136,7 @@ namespace GardenSolver
                 listSelectedPlants.Items.Clear();
                 foreach (string plant in m_selectedPlants)
                 {
-                    if (plant.ToLower().Contains(filter)) 
+                    if (plant.ToLower().Contains(filter))
                     {
                         listSelectedPlants.Items.Add(plant);
                     }
@@ -172,6 +150,58 @@ namespace GardenSolver
         private void textBoxPlantSearch_Click(object sender, EventArgs e)
         {
             textBoxPlantSearch.Text = string.Empty;
+        }
+
+        private void buttonCreate_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SetupPlanterList() 
+        {
+            listPlanters.View = View.Details;
+            listPlanters.GridLines = true;
+            listPlanters.LabelEdit = false;
+            listPlanters.AllowColumnReorder = false;
+
+            listPlanters.Columns.Clear();
+            listPlanters.Columns.Add("Name", -2, HorizontalAlignment.Left);
+            listPlanters.Columns.Add("Nährstoffe", -2, HorizontalAlignment.Center);
+            listPlanters.Columns.Add("Größe", -2, HorizontalAlignment.Center);
+            listPlanters.Columns.Add("Pflanztypen", -2, HorizontalAlignment.Center);
+
+            UpdatePlanterList();
+        }
+
+        private void UpdatePlanterList() 
+        {
+            listPlanters.Items.Clear();
+
+            listPlanters.Items.Add(new ListViewItem("Neues Beet"));
+
+            ListViewItem listViewItem;
+            foreach (Planter plant in m_createdPlanters) 
+            {
+                listViewItem = new ListViewItem(plant.Name);
+                listViewItem.SubItems.Add(plant.PlanterNutrition.ToString());
+                listViewItem.SubItems.Add(plant.m_length.ToString() + " x " + plant.m_width);
+                listViewItem.SubItems.Add(plant.PlantAmount.ToString());
+
+                listPlanters.Items.Add(listViewItem);
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedIndex = listPlanters.SelectedIndices[0];
+            if (selectedIndex == 0)
+            {
+
+            }
+            else 
+            {
+
+            }
         }
     }
 }

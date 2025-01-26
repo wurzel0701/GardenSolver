@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             splitContainer1 = new SplitContainer();
-            groupBox6 = new GroupBox();
-            listGreenhouse = new ListBox();
-            groupBox5 = new GroupBox();
-            listOutside = new ListBox();
+            label2 = new Label();
+            listPlanters = new ListView();
             splitContainer2 = new SplitContainer();
             splitContainer7 = new SplitContainer();
             textName = new TextBox();
@@ -56,34 +54,27 @@
             buttonChoose = new Button();
             listAvailablePlants = new ListBox();
             textBoxPlantSearch = new TextBox();
-            splitContainer3 = new SplitContainer();
-            listBox2 = new ListBox();
-            splitContainer4 = new SplitContainer();
-            splitContainer5 = new SplitContainer();
-            textBox3 = new TextBox();
-            splitContainer6 = new SplitContainer();
-            listBox3 = new ListBox();
-            listBox1 = new ListBox();
             tabControl1 = new TabControl();
             tabDefinePlanter = new TabPage();
             tabPlantTypes = new TabPage();
             tabMovePlants = new TabPage();
             tabSuggestions = new TabPage();
-            tabPlants = new TabPage();
-            tabPlacement = new TabPage();
-            tabPrinting = new TabPage();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripProgressBar1 = new ToolStripProgressBar();
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             debugWindowToolStripMenuItem = new ToolStripMenuItem();
+            splitContainer3 = new SplitContainer();
+            splitContainer4 = new SplitContainer();
+            listView1 = new ListView();
+            button1 = new Button();
+            button2 = new Button();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
-            groupBox6.SuspendLayout();
-            groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
             splitContainer2.Panel1.SuspendLayout();
             splitContainer2.Panel2.SuspendLayout();
@@ -96,6 +87,11 @@
             groupBoxSize.SuspendLayout();
             groupBoxNutrition.SuspendLayout();
             groupBox4.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabDefinePlanter.SuspendLayout();
+            tabPlantTypes.SuspendLayout();
+            statusStrip1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
             splitContainer3.Panel1.SuspendLayout();
             splitContainer3.Panel2.SuspendLayout();
@@ -104,18 +100,6 @@
             splitContainer4.Panel1.SuspendLayout();
             splitContainer4.Panel2.SuspendLayout();
             splitContainer4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer5).BeginInit();
-            splitContainer5.Panel1.SuspendLayout();
-            splitContainer5.Panel2.SuspendLayout();
-            splitContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer6).BeginInit();
-            splitContainer6.Panel1.SuspendLayout();
-            splitContainer6.SuspendLayout();
-            tabControl1.SuspendLayout();
-            tabDefinePlanter.SuspendLayout();
-            tabPlantTypes.SuspendLayout();
-            statusStrip1.SuspendLayout();
-            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -126,41 +110,25 @@
             // splitContainer1.Panel1
             // 
             resources.ApplyResources(splitContainer1.Panel1, "splitContainer1.Panel1");
-            splitContainer1.Panel1.Controls.Add(groupBox6);
-            splitContainer1.Panel1.Controls.Add(groupBox5);
+            splitContainer1.Panel1.Controls.Add(label2);
+            splitContainer1.Panel1.Controls.Add(listPlanters);
             // 
             // splitContainer1.Panel2
             // 
             resources.ApplyResources(splitContainer1.Panel2, "splitContainer1.Panel2");
             splitContainer1.Panel2.Controls.Add(splitContainer2);
             // 
-            // groupBox6
+            // label2
             // 
-            resources.ApplyResources(groupBox6, "groupBox6");
-            groupBox6.Controls.Add(listGreenhouse);
-            groupBox6.Name = "groupBox6";
-            groupBox6.TabStop = false;
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
             // 
-            // listGreenhouse
+            // listPlanters
             // 
-            resources.ApplyResources(listGreenhouse, "listGreenhouse");
-            listGreenhouse.FormattingEnabled = true;
-            listGreenhouse.Name = "listGreenhouse";
-            listGreenhouse.SelectedIndexChanged += listGreenhouse_SelectedIndexChanged;
-            // 
-            // groupBox5
-            // 
-            resources.ApplyResources(groupBox5, "groupBox5");
-            groupBox5.Controls.Add(listOutside);
-            groupBox5.Name = "groupBox5";
-            groupBox5.TabStop = false;
-            // 
-            // listOutside
-            // 
-            resources.ApplyResources(listOutside, "listOutside");
-            listOutside.FormattingEnabled = true;
-            listOutside.Name = "listOutside";
-            listOutside.SelectedIndexChanged += listOutside_SelectedIndexChanged;
+            resources.ApplyResources(listPlanters, "listPlanters");
+            listPlanters.Name = "listPlanters";
+            listPlanters.UseCompatibleStateImageBehavior = false;
+            listPlanters.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // splitContainer2
             // 
@@ -291,6 +259,7 @@
             resources.ApplyResources(buttonCreate, "buttonCreate");
             buttonCreate.Name = "buttonCreate";
             buttonCreate.UseVisualStyleBackColor = true;
+            buttonCreate.Click += buttonCreate_Click;
             // 
             // groupBox4
             // 
@@ -332,88 +301,6 @@
             textBoxPlantSearch.Click += textBoxPlantSearch_Click;
             textBoxPlantSearch.TextChanged += textBoxPlantSearch_TextChanged;
             // 
-            // splitContainer3
-            // 
-            resources.ApplyResources(splitContainer3, "splitContainer3");
-            splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            resources.ApplyResources(splitContainer3.Panel1, "splitContainer3.Panel1");
-            splitContainer3.Panel1.Controls.Add(listBox2);
-            // 
-            // splitContainer3.Panel2
-            // 
-            resources.ApplyResources(splitContainer3.Panel2, "splitContainer3.Panel2");
-            splitContainer3.Panel2.Controls.Add(splitContainer4);
-            // 
-            // listBox2
-            // 
-            resources.ApplyResources(listBox2, "listBox2");
-            listBox2.FormattingEnabled = true;
-            listBox2.Name = "listBox2";
-            // 
-            // splitContainer4
-            // 
-            resources.ApplyResources(splitContainer4, "splitContainer4");
-            splitContainer4.Name = "splitContainer4";
-            // 
-            // splitContainer4.Panel1
-            // 
-            resources.ApplyResources(splitContainer4.Panel1, "splitContainer4.Panel1");
-            splitContainer4.Panel1.Controls.Add(splitContainer5);
-            // 
-            // splitContainer4.Panel2
-            // 
-            resources.ApplyResources(splitContainer4.Panel2, "splitContainer4.Panel2");
-            splitContainer4.Panel2.Controls.Add(listBox1);
-            // 
-            // splitContainer5
-            // 
-            resources.ApplyResources(splitContainer5, "splitContainer5");
-            splitContainer5.Name = "splitContainer5";
-            // 
-            // splitContainer5.Panel1
-            // 
-            resources.ApplyResources(splitContainer5.Panel1, "splitContainer5.Panel1");
-            splitContainer5.Panel1.Controls.Add(textBox3);
-            // 
-            // splitContainer5.Panel2
-            // 
-            resources.ApplyResources(splitContainer5.Panel2, "splitContainer5.Panel2");
-            splitContainer5.Panel2.Controls.Add(splitContainer6);
-            // 
-            // textBox3
-            // 
-            resources.ApplyResources(textBox3, "textBox3");
-            textBox3.Name = "textBox3";
-            // 
-            // splitContainer6
-            // 
-            resources.ApplyResources(splitContainer6, "splitContainer6");
-            splitContainer6.Name = "splitContainer6";
-            // 
-            // splitContainer6.Panel1
-            // 
-            resources.ApplyResources(splitContainer6.Panel1, "splitContainer6.Panel1");
-            splitContainer6.Panel1.Controls.Add(listBox3);
-            // 
-            // splitContainer6.Panel2
-            // 
-            resources.ApplyResources(splitContainer6.Panel2, "splitContainer6.Panel2");
-            // 
-            // listBox3
-            // 
-            resources.ApplyResources(listBox3, "listBox3");
-            listBox3.FormattingEnabled = true;
-            listBox3.Name = "listBox3";
-            // 
-            // listBox1
-            // 
-            resources.ApplyResources(listBox1, "listBox1");
-            listBox1.FormattingEnabled = true;
-            listBox1.Name = "listBox1";
-            // 
             // tabControl1
             // 
             resources.ApplyResources(tabControl1, "tabControl1");
@@ -421,9 +308,6 @@
             tabControl1.Controls.Add(tabPlantTypes);
             tabControl1.Controls.Add(tabMovePlants);
             tabControl1.Controls.Add(tabSuggestions);
-            tabControl1.Controls.Add(tabPlants);
-            tabControl1.Controls.Add(tabPlacement);
-            tabControl1.Controls.Add(tabPrinting);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
             // 
@@ -452,24 +336,6 @@
             resources.ApplyResources(tabSuggestions, "tabSuggestions");
             tabSuggestions.Name = "tabSuggestions";
             tabSuggestions.UseVisualStyleBackColor = true;
-            // 
-            // tabPlants
-            // 
-            resources.ApplyResources(tabPlants, "tabPlants");
-            tabPlants.Name = "tabPlants";
-            tabPlants.UseVisualStyleBackColor = true;
-            // 
-            // tabPlacement
-            // 
-            resources.ApplyResources(tabPlacement, "tabPlacement");
-            tabPlacement.Name = "tabPlacement";
-            tabPlacement.UseVisualStyleBackColor = true;
-            // 
-            // tabPrinting
-            // 
-            resources.ApplyResources(tabPrinting, "tabPrinting");
-            tabPrinting.Name = "tabPrinting";
-            tabPrinting.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
             // 
@@ -504,6 +370,60 @@
             resources.ApplyResources(debugWindowToolStripMenuItem, "debugWindowToolStripMenuItem");
             debugWindowToolStripMenuItem.Name = "debugWindowToolStripMenuItem";
             // 
+            // splitContainer3
+            // 
+            resources.ApplyResources(splitContainer3, "splitContainer3");
+            splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            resources.ApplyResources(splitContainer3.Panel1, "splitContainer3.Panel1");
+            splitContainer3.Panel1.Controls.Add(splitContainer4);
+            // 
+            // splitContainer3.Panel2
+            // 
+            resources.ApplyResources(splitContainer3.Panel2, "splitContainer3.Panel2");
+            splitContainer3.Panel2.Controls.Add(textBox1);
+            // 
+            // splitContainer4
+            // 
+            resources.ApplyResources(splitContainer4, "splitContainer4");
+            splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            resources.ApplyResources(splitContainer4.Panel1, "splitContainer4.Panel1");
+            splitContainer4.Panel1.Controls.Add(listView1);
+            // 
+            // splitContainer4.Panel2
+            // 
+            resources.ApplyResources(splitContainer4.Panel2, "splitContainer4.Panel2");
+            splitContainer4.Panel2.Controls.Add(button2);
+            splitContainer4.Panel2.Controls.Add(button1);
+            // 
+            // listView1
+            // 
+            resources.ApplyResources(listView1, "listView1");
+            listView1.Name = "listView1";
+            listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button1
+            // 
+            resources.ApplyResources(button1, "button1");
+            button1.Name = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(button2, "button2");
+            button2.Name = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.Name = "textBox1";
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
@@ -516,11 +436,10 @@
             Name = "MainWindow";
             SizeGripStyle = SizeGripStyle.Hide;
             splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
-            groupBox6.ResumeLayout(false);
-            groupBox5.ResumeLayout(false);
             splitContainer2.Panel1.ResumeLayout(false);
             splitContainer2.Panel2.ResumeLayout(false);
             splitContainer2.Panel2.PerformLayout();
@@ -539,22 +458,6 @@
             groupBoxNutrition.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
-            splitContainer3.Panel1.ResumeLayout(false);
-            splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
-            splitContainer3.ResumeLayout(false);
-            splitContainer4.Panel1.ResumeLayout(false);
-            splitContainer4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer4).EndInit();
-            splitContainer4.ResumeLayout(false);
-            splitContainer5.Panel1.ResumeLayout(false);
-            splitContainer5.Panel1.PerformLayout();
-            splitContainer5.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer5).EndInit();
-            splitContainer5.ResumeLayout(false);
-            splitContainer6.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer6).EndInit();
-            splitContainer6.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
             tabDefinePlanter.ResumeLayout(false);
             tabPlantTypes.ResumeLayout(false);
@@ -562,6 +465,15 @@
             statusStrip1.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            splitContainer3.Panel1.ResumeLayout(false);
+            splitContainer3.Panel2.ResumeLayout(false);
+            splitContainer3.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
+            splitContainer3.ResumeLayout(false);
+            splitContainer4.Panel1.ResumeLayout(false);
+            splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer4).EndInit();
+            splitContainer4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -573,9 +485,6 @@
         private TabPage tabPlantTypes;
         private TabPage tabMovePlants;
         private TabPage tabSuggestions;
-        private TabPage tabPlants;
-        private TabPage tabPlacement;
-        private TabPage tabPrinting;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripProgressBar toolStripProgressBar1;
@@ -584,16 +493,6 @@
         private ToolStripMenuItem debugWindowToolStripMenuItem;
         private SplitContainer splitContainer1;
         private SplitContainer splitContainer2;
-        private SplitContainer splitContainer3;
-        private ListBox listBox2;
-        private SplitContainer splitContainer4;
-        private SplitContainer splitContainer5;
-        private TextBox textBox3;
-        private SplitContainer splitContainer6;
-        private ListBox listBox3;
-        private ListBox listBox1;
-        private GroupBox groupBox6;
-        private GroupBox groupBox5;
         private SplitContainer splitContainer7;
         private TextBox textName;
         private Button buttonAbort;
@@ -611,11 +510,17 @@
         private Button buttonCreate;
         private GroupBox groupBox4;
         private TextBox textBoxInfo;
-        private ListBox listGreenhouse;
-        private ListBox listOutside;
         private ListBox listSelectedPlants;
         private Button buttonChoose;
         private ListBox listAvailablePlants;
         private TextBox textBoxPlantSearch;
+        private Label label2;
+        private ListView listPlanters;
+        private SplitContainer splitContainer3;
+        private SplitContainer splitContainer4;
+        private ListView listView1;
+        private Button button2;
+        private Button button1;
+        private TextBox textBox1;
     }
 }

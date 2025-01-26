@@ -121,43 +121,31 @@
   <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="listGreenhouse.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="listGreenhouse.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="listGreenhouse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 268</value>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
   </data>
-  <data name="groupBox6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 3</value>
   </data>
-  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 290</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
   </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Gewächshaus</value>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="listOutside.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Beete</value>
   </data>
-  <data name="listOutside.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
-  <data name="listOutside.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 277</value>
-  </data>
-  <data name="groupBox5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 299</value>
-  </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Außenbeet</value>
+  <data name="listPlanters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 567</value>
   </data>
   <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -402,78 +390,6 @@
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>297</value>
   </data>
-  <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="listBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="listBox2.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="listBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 595</value>
-  </data>
-  <data name="splitContainer4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer5.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 23</value>
-  </data>
-  <data name="splitContainer6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="splitContainer6.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="listBox3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="listBox3.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="listBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 455</value>
-  </data>
-  <data name="splitContainer6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 513</value>
-  </data>
-  <data name="splitContainer6.SplitterDistance" type="System.Int32, mscorlib">
-    <value>455</value>
-  </data>
-  <data name="splitContainer5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 595</value>
-  </data>
-  <data name="splitContainer5.SplitterDistance" type="System.Int32, mscorlib">
-    <value>78</value>
-  </data>
-  <data name="listBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 595</value>
-  </data>
-  <data name="splitContainer4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>964, 595</value>
-  </data>
-  <data name="splitContainer4.SplitterDistance" type="System.Int32, mscorlib">
-    <value>516</value>
-  </data>
-  <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1250, 595</value>
-  </data>
-  <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>282</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabDefinePlanter.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -482,7 +398,79 @@
     <value>1256, 601</value>
   </data>
   <data name="tabDefinePlanter.Text" xml:space="preserve">
-    <value>Beet definieren</value>
+    <value>Beete definieren</value>
+  </data>
+  <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer4.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="listView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>933, 548</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 2</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 37</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Ablehnen</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>516, 2</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 37</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Annehmen</value>
+  </data>
+  <data name="splitContainer4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>933, 595</value>
+  </data>
+  <data name="splitContainer4.SplitterDistance" type="System.Int32, mscorlib">
+    <value>548</value>
+  </data>
+  <data name="textBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 595</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1250, 595</value>
+  </data>
+  <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
+    <value>933</value>
   </data>
   <data name="tabPlantTypes.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -491,37 +479,19 @@
     <value>1256, 601</value>
   </data>
   <data name="tabPlantTypes.Text" xml:space="preserve">
-    <value>Planzenarten</value>
+    <value>Verbessern</value>
   </data>
   <data name="tabMovePlants.Size" type="System.Drawing.Size, System.Drawing">
     <value>1256, 601</value>
   </data>
   <data name="tabMovePlants.Text" xml:space="preserve">
-    <value>Pflanzen schieben</value>
+    <value>Sorten definieren</value>
   </data>
   <data name="tabSuggestions.Size" type="System.Drawing.Size, System.Drawing">
     <value>1256, 601</value>
   </data>
   <data name="tabSuggestions.Text" xml:space="preserve">
-    <value>Empfehlungen</value>
-  </data>
-  <data name="tabPlants.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 601</value>
-  </data>
-  <data name="tabPlants.Text" xml:space="preserve">
-    <value>Sorten eintragen</value>
-  </data>
-  <data name="tabPlacement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 601</value>
-  </data>
-  <data name="tabPlacement.Text" xml:space="preserve">
     <value>Anbauplan</value>
-  </data>
-  <data name="tabPrinting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 601</value>
-  </data>
-  <data name="tabPrinting.Text" xml:space="preserve">
-    <value>Drucken</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 27</value>

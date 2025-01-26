@@ -11,12 +11,12 @@ namespace GardenSolver
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             PlantTypeLibrary ptl = new PlantTypeLibrary();
-            Planter planter1 = new Planter(NutritionRequirementsEnum.LOW);
+            /*Planter planter1 = new Planter(NutritionRequirementsEnum.LOW);
             planter1.SetChoosenPlantTypes(new List<string>() { "Buschbohne", "Erbse", "Knoblauch", "Schnittlauch", "Petersilie", "Rosmarin", "Basilikum", "Thymian" });
             Planter planter2 = new Planter(NutritionRequirementsEnum.MEDIUM);
             planter2.SetChoosenPlantTypes(new List<string>() { "Möhre", "Salat", "Tomatillo", "Rote Bete", "Spinat", "Kohlrabi", "Zwiebel" });
             Planter planter3 = new Planter(NutritionRequirementsEnum.HIGH);
-            planter3.SetChoosenPlantTypes(new List<string>() { "Gurke", "Kartoffel", "Mais", "Paprika", "Tomate", "Zucchini", "Aubergine", "Kohl", "Lauch" /*, "Süßkartoffel" */ });
+            planter3.SetChoosenPlantTypes(new List<string>() { "Gurke", "Kartoffel", "Mais", "Paprika", "Tomate", "Zucchini", "Aubergine", "Kohl", "Lauch" /*, "Süßkartoffel"  });*/
             ApplicationConfiguration.Initialize();
             Application.Run(new MainWindow());
         }
