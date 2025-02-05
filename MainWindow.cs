@@ -147,40 +147,37 @@ namespace GardenSolver
             }
         }
 
-        private void textBoxPlantSearch_Click(object sender, EventArgs e)
-        {
-            textBoxPlantSearch.Text = string.Empty;
-        }
-
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void SetupPlanterList() 
+        private void SetupPlanterList()
         {
             listPlanters.View = View.Details;
             listPlanters.GridLines = true;
             listPlanters.LabelEdit = false;
             listPlanters.AllowColumnReorder = false;
+            listPlanters.MultiSelect = false;
+            listPlanters.FullRowSelect = true;
 
+            Size listSize = listPlanters.Size;
+            int sizeSplit = listSize.Width / 9;
             listPlanters.Columns.Clear();
-            listPlanters.Columns.Add("Name", -2, HorizontalAlignment.Left);
-            listPlanters.Columns.Add("Nährstoffe", -2, HorizontalAlignment.Center);
-            listPlanters.Columns.Add("Größe", -2, HorizontalAlignment.Center);
-            listPlanters.Columns.Add("Pflanztypen", -2, HorizontalAlignment.Center);
+            listPlanters.Columns.Add("Name", sizeSplit * 3, HorizontalAlignment.Center);
+            listPlanters.Columns.Add("Nährstoffe", sizeSplit * 2, HorizontalAlignment.Center);
+            listPlanters.Columns.Add("Größe", sizeSplit * 2, HorizontalAlignment.Center);
+            listPlanters.Columns.Add("#Pflanzen", sizeSplit * 2, HorizontalAlignment.Center);
 
             UpdatePlanterList();
         }
 
-        private void UpdatePlanterList() 
+        private void UpdatePlanterList()
         {
             listPlanters.Items.Clear();
 
-            listPlanters.Items.Add(new ListViewItem("Neues Beet"));
-
             ListViewItem listViewItem;
-            foreach (Planter plant in m_createdPlanters) 
+            foreach (Planter plant in m_createdPlanters)
             {
                 listViewItem = new ListViewItem(plant.Name);
                 listViewItem.SubItems.Add(plant.PlanterNutrition.ToString());
@@ -191,17 +188,32 @@ namespace GardenSolver
             }
         }
 
+        private void ShowPlanterData(Planter planter)
+        {
+
+        }
+
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listPlanters.SelectedIndices.Count == 0)
+            {
+                return;
+            }
             int selectedIndex = listPlanters.SelectedIndices[0];
-            if (selectedIndex == 0)
-            {
+            Planter selectedPlanter = m_createdPlanters[selectedIndex];
+            ShowPlanterData(selectedPlanter);
+        }
 
-            }
-            else 
-            {
+        private void m_newButton_Click(object sender, EventArgs e)
+        {
+            Planter planter = new Planter(NutritionRequirementsEnum.LOW, "Neues Beet", false, 1.2f, 3);
+            m_createdPlanters.Add(planter);
+            UpdatePlanterList();
+        }
 
-            }
+        private void m_deleteButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

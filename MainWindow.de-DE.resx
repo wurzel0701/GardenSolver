@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema
+    Microsoft ResX Schema 
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -121,16 +121,40 @@
   <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="m_newButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_newButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 557</value>
+  </data>
+  <data name="m_newButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 31</value>
+  </data>
+  <data name="m_newButton.Text" xml:space="preserve">
+    <value>Neu</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_deleteButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_deleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 557</value>
+  </data>
+  <data name="m_deleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 31</value>
+  </data>
+  <data name="m_deleteButton.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 3</value>
+    <value>219, 4</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 21</value>
@@ -145,7 +169,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="listPlanters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 567</value>
+    <value>516, 527</value>
   </data>
   <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -156,8 +180,11 @@
   <data name="splitContainer7.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="textName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 62</value>
+  </data>
   <data name="textName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 23</value>
+    <value>194, 23</value>
   </data>
   <data name="textName.Text" xml:space="preserve">
     <value>Name</value>
@@ -167,6 +194,9 @@
   </data>
   <data name="buttonAbort.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="buttonAbort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 398</value>
   </data>
   <data name="buttonAbort.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 31</value>
@@ -184,7 +214,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 19</value>
+    <value>48, 19</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 32</value>
@@ -225,35 +255,53 @@
   <data name="radioButton9.Text" xml:space="preserve">
     <value>Außenbeet</value>
   </data>
+  <data name="groupBoxPlacement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 274</value>
+  </data>
   <data name="groupBoxPlacement.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 71</value>
   </data>
   <data name="groupBoxPlacement.Text" xml:space="preserve">
     <value>Standort</value>
   </data>
-  <data name="textBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 15</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Breite</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 15</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Länge</value>
   </data>
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 42</value>
+    <value>80, 42</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 23</value>
+    <value>108, 23</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>Breite</value>
-  </data>
-  <data name="textBoxLength.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="textBoxLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 19</value>
   </data>
   <data name="textBoxLength.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 23</value>
+    <value>108, 23</value>
   </data>
-  <data name="textBoxLength.Text" xml:space="preserve">
-    <value>Länge</value>
+  <data name="groupBoxSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 185</value>
   </data>
   <data name="groupBoxSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 83</value>
@@ -309,6 +357,9 @@
   <data name="radioButton1.Text" xml:space="preserve">
     <value>Schwachzehrer</value>
   </data>
+  <data name="groupBoxNutrition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 91</value>
+  </data>
   <data name="groupBoxNutrition.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 88</value>
   </data>
@@ -320,6 +371,9 @@
   </data>
   <data name="buttonCreate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="buttonCreate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 351</value>
   </data>
   <data name="buttonCreate.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 41</value>
@@ -334,31 +388,46 @@
     <value>True</value>
   </data>
   <data name="textBoxInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>426, 121</value>
+    <value>258, 121</value>
   </data>
   <data name="groupBox4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 143</value>
+    <value>264, 143</value>
   </data>
   <data name="groupBox4.Text" xml:space="preserve">
     <value>Info</value>
   </data>
   <data name="splitContainer7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 595</value>
+    <value>264, 595</value>
   </data>
   <data name="splitContainer7.SplitterDistance" type="System.Int32, mscorlib">
     <value>448</value>
   </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 15</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Suche</value>
+  </data>
   <data name="listSelectedPlants.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="listSelectedPlants.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 358</value>
+  </data>
   <data name="listSelectedPlants.Size" type="System.Drawing.Size, System.Drawing">
-    <value>443, 214</value>
+    <value>403, 229</value>
   </data>
   <data name="buttonChoose.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="buttonChoose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 317</value>
   </data>
   <data name="buttonChoose.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 35</value>
@@ -370,35 +439,25 @@
     <value>15</value>
   </data>
   <data name="listAvailablePlants.Size" type="System.Drawing.Size, System.Drawing">
-    <value>443, 244</value>
+    <value>403, 244</value>
+  </data>
+  <data name="textBoxPlantSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 28</value>
   </data>
   <data name="textBoxPlantSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 23</value>
-  </data>
-  <data name="textBoxPlantSearch.Text" xml:space="preserve">
-    <value>Suche</value>
+    <value>333, 23</value>
   </data>
   <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>949, 595</value>
+    <value>728, 595</value>
   </data>
   <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
-    <value>432</value>
+    <value>264</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1250, 595</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>297</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabDefinePlanter.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabDefinePlanter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1256, 601</value>
-  </data>
-  <data name="tabDefinePlanter.Text" xml:space="preserve">
-    <value>Beete definieren</value>
+    <value>518</value>
   </data>
   <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -416,7 +475,7 @@
     <value>0, 0</value>
   </data>
   <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>933, 548</value>
+    <value>932, 548</value>
   </data>
   <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -446,7 +505,7 @@
     <value>Annehmen</value>
   </data>
   <data name="splitContainer4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>933, 595</value>
+    <value>932, 595</value>
   </data>
   <data name="splitContainer4.SplitterDistance" type="System.Int32, mscorlib">
     <value>548</value>
@@ -461,7 +520,7 @@
     <value>True</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 595</value>
+    <value>314, 595</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -470,7 +529,17 @@
     <value>1250, 595</value>
   </data>
   <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>933</value>
+    <value>932</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabDefinePlanter.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabDefinePlanter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1256, 601</value>
+  </data>
+  <data name="tabDefinePlanter.Text" xml:space="preserve">
+    <value>Beete definieren</value>
   </data>
   <data name="tabPlantTypes.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
