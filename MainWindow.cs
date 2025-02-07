@@ -162,7 +162,7 @@ namespace GardenSolver
             listPlanters.FullRowSelect = true;
 
             Size listSize = listPlanters.Size;
-            int sizeSplit = listSize.Width / 9;
+            int sizeSplit = (listSize.Width / 9) - 2;
             listPlanters.Columns.Clear();
             listPlanters.Columns.Add("Name", sizeSplit * 3, HorizontalAlignment.Center);
             listPlanters.Columns.Add("Nährstoffe", sizeSplit * 2, HorizontalAlignment.Center);
@@ -197,11 +197,13 @@ namespace GardenSolver
         {
             if (listPlanters.SelectedIndices.Count == 0)
             {
+                m_deleteButton.Enabled = false;
                 return;
             }
             int selectedIndex = listPlanters.SelectedIndices[0];
             Planter selectedPlanter = m_createdPlanters[selectedIndex];
             ShowPlanterData(selectedPlanter);
+            m_deleteButton.Enabled = true;
         }
 
         private void m_newButton_Click(object sender, EventArgs e)
@@ -213,7 +215,14 @@ namespace GardenSolver
 
         private void m_deleteButton_Click(object sender, EventArgs e)
         {
+            m_deleteButton.Enabled = false;
+            if (listPlanters.SelectedIndices.Count <= 0) 
+            {
+                return;
+            }
 
+            m_createdPlanters.RemoveAt(listPlanters.SelectedIndices[0]);
+            UpdatePlanterList();
         }
     }
 }

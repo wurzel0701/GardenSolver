@@ -36,7 +36,7 @@
             listPlanters = new ListView();
             splitContainer2 = new SplitContainer();
             splitContainer7 = new SplitContainer();
-            textName = new TextBox();
+            m_textName = new TextBox();
             buttonAbort = new Button();
             label1 = new Label();
             groupBoxPlacement = new GroupBox();
@@ -178,7 +178,7 @@
             // splitContainer7.Panel1
             // 
             resources.ApplyResources(splitContainer7.Panel1, "splitContainer7.Panel1");
-            splitContainer7.Panel1.Controls.Add(textName);
+            splitContainer7.Panel1.Controls.Add(m_textName);
             splitContainer7.Panel1.Controls.Add(buttonAbort);
             splitContainer7.Panel1.Controls.Add(label1);
             splitContainer7.Panel1.Controls.Add(groupBoxPlacement);
@@ -191,10 +191,10 @@
             resources.ApplyResources(splitContainer7.Panel2, "splitContainer7.Panel2");
             splitContainer7.Panel2.Controls.Add(groupBox4);
             // 
-            // textName
+            // m_textName
             // 
-            resources.ApplyResources(textName, "textName");
-            textName.Name = "textName";
+            resources.ApplyResources(m_textName, "m_textName");
+            m_textName.Name = "m_textName";
             // 
             // buttonAbort
             // 
@@ -532,7 +532,7 @@
         private SplitContainer splitContainer1;
         private SplitContainer splitContainer2;
         private SplitContainer splitContainer7;
-        private TextBox textName;
+        private TextBox m_textName;
         private Button buttonAbort;
         private Label label1;
         private GroupBox groupBoxPlacement;
