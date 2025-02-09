@@ -8,15 +8,15 @@ namespace GardenSolver
 {
     internal class Planter(NutritionRequirementsEnum planterNutrition, string name, bool isOutside, float width, float length)
     {
-        public string Name { get; private set; } = name;
+        public string Name { get; set; } = name;
 
-        public NutritionRequirementsEnum PlanterNutrition { get; private set; } = planterNutrition;
+        public NutritionRequirementsEnum PlanterNutrition { get; set; } = planterNutrition;
 
-        public bool IsOutside { get; private set; } = isOutside;
+        public bool IsOutside { get; set; } = isOutside;
 
         public int PlantAmount => ChoosenPlantTypes.Count;
 
-        private List<string> ChoosenPlantTypes = new List<string>();
+        public List<string> ChoosenPlantTypes = new List<string>();
 
         private Dictionary<string, short> PlantTypeRating = new Dictionary<string, short>();
 

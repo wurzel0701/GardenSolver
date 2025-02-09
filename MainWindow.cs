@@ -18,11 +18,13 @@ namespace GardenSolver
 
         private List<Planter> m_createdPlanters = new List<Planter> { };
 
+        private Planter? m_currentSelected = null;
+
         public MainWindow()
         {
             InitializeComponent();
-            FillBoxes();
             SetupPlanterList();
+            ClearWindow();
         }
 
         private void FillBoxes()
@@ -149,7 +151,8 @@ namespace GardenSolver
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-
+            SavePlanterData();
+            UpdatePlanterList();
         }
 
         private void SetupPlanterList()
@@ -162,12 +165,12 @@ namespace GardenSolver
             listPlanters.FullRowSelect = true;
 
             Size listSize = listPlanters.Size;
-            int sizeSplit = (listSize.Width / 9) - 2;
+            int sizeSplit = (listSize.Width / 9);
             listPlanters.Columns.Clear();
             listPlanters.Columns.Add("Name", sizeSplit * 3, HorizontalAlignment.Center);
             listPlanters.Columns.Add("Nährstoffe", sizeSplit * 2, HorizontalAlignment.Center);
             listPlanters.Columns.Add("Größe", sizeSplit * 2, HorizontalAlignment.Center);
-            listPlanters.Columns.Add("#Pflanzen", sizeSplit * 2, HorizontalAlignment.Center);
+            listPlanters.Columns.Add("#Pflanzen", -2, HorizontalAlignment.Center);
 
             UpdatePlanterList();
         }
@@ -186,11 +189,115 @@ namespace GardenSolver
 
                 listPlanters.Items.Add(listViewItem);
             }
+
+            ClearWindow();
         }
 
-        private void ShowPlanterData(Planter planter)
+        private void ClearWindow() 
         {
+            m_textName.Text = string.Empty;
+            m_textName.Enabled = false;
 
+            m_textBoxLength.Text = string.Empty;
+            m_textBoxWidth.Text = string.Empty;
+
+            m_gBNutrition.Enabled = false;
+            m_gBPlacement.Enabled = false;
+            m_gBSize.Enabled = false;
+
+            m_btAccept.Enabled = false;
+            m_btAbort.Enabled = false;
+        }
+
+        private void SavePlanterData()
+        {
+            if (m_currentSelected == null)
+            {
+                return;
+            }
+            m_currentSelected.Name = m_textName.Text;
+
+            m_currentSelected.m_length = float.Parse(m_textBoxLength.Text);
+            m_currentSelected.m_width = float.Parse(m_textBoxWidth.Text);
+
+            if (m_radioButtonLow.Checked)
+            {
+                m_currentSelected.PlanterNutrition = NutritionRequirementsEnum.LOW;
+            }
+            else if (m_radioButtonMedium.Checked)
+            {
+                m_currentSelected.PlanterNutrition = NutritionRequirementsEnum.MEDIUM;
+            }
+            else 
+            {
+                m_currentSelected.PlanterNutrition = NutritionRequirementsEnum.HIGH;
+            }
+
+            m_currentSelected.IsOutside = m_rBOutside.Checked;
+        }
+
+        private void ShowPlanterData()
+        {
+            if (m_currentSelected == null) 
+            {
+                return;
+            }
+
+            m_gBNutrition.Enabled = true;
+            m_gBPlacement.Enabled = true;
+            m_gBSize.Enabled = true;
+            m_textName.Enabled = true;
+
+            m_radioButtonLow.Enabled = true;
+            m_radioButtonMedium.Enabled = true;
+
+            m_textName.Text = m_currentSelected.Name;
+            switch (m_currentSelected.PlanterNutrition)
+            {
+                case NutritionRequirementsEnum.LOW:
+                    m_radioButtonLow.Checked = true;
+                    break;
+                case NutritionRequirementsEnum.MEDIUM:
+                    m_radioButtonMedium.Checked = true;
+                    break;
+                case NutritionRequirementsEnum.HIGH:
+                    m_radioButtonHigh.Checked = true;
+                    break;
+            }
+
+            foreach (string selected in m_currentSelected.ChoosenPlantTypes) 
+            {
+                PlantType type = PlantTypeLibrary.GetPlantTypeOfName(selected);
+                if (type != null) 
+                {
+                    if (type.NutritionRequirements == NutritionRequirementsEnum.MEDIUM)
+                    {
+                        m_radioButtonLow.Enabled = false;
+                    }
+                    if (type.NutritionRequirements == NutritionRequirementsEnum.HIGH)
+                    {
+                        m_radioButtonLow.Enabled = false;
+                        m_radioButtonMedium.Enabled = false;
+                        break;
+                    }
+                }
+                
+            }
+
+            m_textBoxLength.Text = m_currentSelected.m_length.ToString();
+            m_textBoxWidth.Text = m_currentSelected.m_width.ToString();
+
+            if (m_currentSelected.IsOutside)
+            {
+                m_rBOutside.Checked = true;
+            }
+            else
+            {
+                m_rBInside.Checked = true;
+            }
+
+            m_btAbort.Enabled = true;
+            m_btAccept.Enabled = true;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -198,17 +305,19 @@ namespace GardenSolver
             if (listPlanters.SelectedIndices.Count == 0)
             {
                 m_deleteButton.Enabled = false;
+                m_currentSelected = null;
+                ClearWindow();
                 return;
             }
             int selectedIndex = listPlanters.SelectedIndices[0];
-            Planter selectedPlanter = m_createdPlanters[selectedIndex];
-            ShowPlanterData(selectedPlanter);
+            m_currentSelected = m_createdPlanters[selectedIndex];
+            ShowPlanterData();
             m_deleteButton.Enabled = true;
         }
 
         private void m_newButton_Click(object sender, EventArgs e)
         {
-            Planter planter = new Planter(NutritionRequirementsEnum.LOW, "Neues Beet", false, 1.2f, 3);
+            Planter planter = new Planter(NutritionRequirementsEnum.LOW, "Neues Beet", true, 1.2f, 3);
             m_createdPlanters.Add(planter);
             UpdatePlanterList();
         }
@@ -216,13 +325,19 @@ namespace GardenSolver
         private void m_deleteButton_Click(object sender, EventArgs e)
         {
             m_deleteButton.Enabled = false;
-            if (listPlanters.SelectedIndices.Count <= 0) 
+            if (listPlanters.SelectedIndices.Count <= 0)
             {
                 return;
             }
 
             m_createdPlanters.RemoveAt(listPlanters.SelectedIndices[0]);
             UpdatePlanterList();
+            ClearWindow();
+        }
+
+        private void m_btAbort_Click(object sender, EventArgs e)
+        {
+            ShowPlanterData();
         }
     }
 }

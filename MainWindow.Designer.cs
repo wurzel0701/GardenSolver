@@ -37,21 +37,21 @@
             splitContainer2 = new SplitContainer();
             splitContainer7 = new SplitContainer();
             m_textName = new TextBox();
-            buttonAbort = new Button();
+            m_btAbort = new Button();
             label1 = new Label();
-            groupBoxPlacement = new GroupBox();
-            radioButton8 = new RadioButton();
-            radioButton9 = new RadioButton();
-            groupBoxSize = new GroupBox();
+            m_gBPlacement = new GroupBox();
+            m_rBInside = new RadioButton();
+            m_rBOutside = new RadioButton();
+            m_gBSize = new GroupBox();
             label4 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
-            textBoxLength = new TextBox();
-            groupBoxNutrition = new GroupBox();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            buttonCreate = new Button();
+            m_textBoxWidth = new TextBox();
+            m_textBoxLength = new TextBox();
+            m_gBNutrition = new GroupBox();
+            m_radioButtonHigh = new RadioButton();
+            m_radioButtonMedium = new RadioButton();
+            m_radioButtonLow = new RadioButton();
+            m_btAccept = new Button();
             groupBox4 = new GroupBox();
             textBoxInfo = new TextBox();
             label5 = new Label();
@@ -88,9 +88,9 @@
             splitContainer7.Panel1.SuspendLayout();
             splitContainer7.Panel2.SuspendLayout();
             splitContainer7.SuspendLayout();
-            groupBoxPlacement.SuspendLayout();
-            groupBoxSize.SuspendLayout();
-            groupBoxNutrition.SuspendLayout();
+            m_gBPlacement.SuspendLayout();
+            m_gBSize.SuspendLayout();
+            m_gBNutrition.SuspendLayout();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
             splitContainer3.Panel1.SuspendLayout();
@@ -179,12 +179,12 @@
             // 
             resources.ApplyResources(splitContainer7.Panel1, "splitContainer7.Panel1");
             splitContainer7.Panel1.Controls.Add(m_textName);
-            splitContainer7.Panel1.Controls.Add(buttonAbort);
+            splitContainer7.Panel1.Controls.Add(m_btAbort);
             splitContainer7.Panel1.Controls.Add(label1);
-            splitContainer7.Panel1.Controls.Add(groupBoxPlacement);
-            splitContainer7.Panel1.Controls.Add(groupBoxSize);
-            splitContainer7.Panel1.Controls.Add(groupBoxNutrition);
-            splitContainer7.Panel1.Controls.Add(buttonCreate);
+            splitContainer7.Panel1.Controls.Add(m_gBPlacement);
+            splitContainer7.Panel1.Controls.Add(m_gBSize);
+            splitContainer7.Panel1.Controls.Add(m_gBNutrition);
+            splitContainer7.Panel1.Controls.Add(m_btAccept);
             // 
             // splitContainer7.Panel2
             // 
@@ -196,48 +196,49 @@
             resources.ApplyResources(m_textName, "m_textName");
             m_textName.Name = "m_textName";
             // 
-            // buttonAbort
+            // m_btAbort
             // 
-            resources.ApplyResources(buttonAbort, "buttonAbort");
-            buttonAbort.Name = "buttonAbort";
-            buttonAbort.UseVisualStyleBackColor = true;
+            resources.ApplyResources(m_btAbort, "m_btAbort");
+            m_btAbort.Name = "m_btAbort";
+            m_btAbort.UseVisualStyleBackColor = true;
+            m_btAbort.Click += m_btAbort_Click;
             // 
             // label1
             // 
             resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
             // 
-            // groupBoxPlacement
+            // m_gBPlacement
             // 
-            resources.ApplyResources(groupBoxPlacement, "groupBoxPlacement");
-            groupBoxPlacement.Controls.Add(radioButton8);
-            groupBoxPlacement.Controls.Add(radioButton9);
-            groupBoxPlacement.Name = "groupBoxPlacement";
-            groupBoxPlacement.TabStop = false;
+            resources.ApplyResources(m_gBPlacement, "m_gBPlacement");
+            m_gBPlacement.Controls.Add(m_rBInside);
+            m_gBPlacement.Controls.Add(m_rBOutside);
+            m_gBPlacement.Name = "m_gBPlacement";
+            m_gBPlacement.TabStop = false;
             // 
-            // radioButton8
+            // m_rBInside
             // 
-            resources.ApplyResources(radioButton8, "radioButton8");
-            radioButton8.Name = "radioButton8";
-            radioButton8.UseVisualStyleBackColor = true;
+            resources.ApplyResources(m_rBInside, "m_rBInside");
+            m_rBInside.Name = "m_rBInside";
+            m_rBInside.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // m_rBOutside
             // 
-            resources.ApplyResources(radioButton9, "radioButton9");
-            radioButton9.Checked = true;
-            radioButton9.Name = "radioButton9";
-            radioButton9.TabStop = true;
-            radioButton9.UseVisualStyleBackColor = true;
+            resources.ApplyResources(m_rBOutside, "m_rBOutside");
+            m_rBOutside.Checked = true;
+            m_rBOutside.Name = "m_rBOutside";
+            m_rBOutside.TabStop = true;
+            m_rBOutside.UseVisualStyleBackColor = true;
             // 
-            // groupBoxSize
+            // m_gBSize
             // 
-            resources.ApplyResources(groupBoxSize, "groupBoxSize");
-            groupBoxSize.Controls.Add(label4);
-            groupBoxSize.Controls.Add(label3);
-            groupBoxSize.Controls.Add(textBox2);
-            groupBoxSize.Controls.Add(textBoxLength);
-            groupBoxSize.Name = "groupBoxSize";
-            groupBoxSize.TabStop = false;
+            resources.ApplyResources(m_gBSize, "m_gBSize");
+            m_gBSize.Controls.Add(label4);
+            m_gBSize.Controls.Add(label3);
+            m_gBSize.Controls.Add(m_textBoxWidth);
+            m_gBSize.Controls.Add(m_textBoxLength);
+            m_gBSize.Name = "m_gBSize";
+            m_gBSize.TabStop = false;
             // 
             // label4
             // 
@@ -249,51 +250,51 @@
             resources.ApplyResources(label3, "label3");
             label3.Name = "label3";
             // 
-            // textBox2
+            // m_textBoxWidth
             // 
-            resources.ApplyResources(textBox2, "textBox2");
-            textBox2.Name = "textBox2";
+            resources.ApplyResources(m_textBoxWidth, "m_textBoxWidth");
+            m_textBoxWidth.Name = "m_textBoxWidth";
             // 
-            // textBoxLength
+            // m_textBoxLength
             // 
-            resources.ApplyResources(textBoxLength, "textBoxLength");
-            textBoxLength.Name = "textBoxLength";
+            resources.ApplyResources(m_textBoxLength, "m_textBoxLength");
+            m_textBoxLength.Name = "m_textBoxLength";
             // 
-            // groupBoxNutrition
+            // m_gBNutrition
             // 
-            resources.ApplyResources(groupBoxNutrition, "groupBoxNutrition");
-            groupBoxNutrition.Controls.Add(radioButton3);
-            groupBoxNutrition.Controls.Add(radioButton2);
-            groupBoxNutrition.Controls.Add(radioButton1);
-            groupBoxNutrition.Name = "groupBoxNutrition";
-            groupBoxNutrition.TabStop = false;
+            resources.ApplyResources(m_gBNutrition, "m_gBNutrition");
+            m_gBNutrition.Controls.Add(m_radioButtonHigh);
+            m_gBNutrition.Controls.Add(m_radioButtonMedium);
+            m_gBNutrition.Controls.Add(m_radioButtonLow);
+            m_gBNutrition.Name = "m_gBNutrition";
+            m_gBNutrition.TabStop = false;
             // 
-            // radioButton3
+            // m_radioButtonHigh
             // 
-            resources.ApplyResources(radioButton3, "radioButton3");
-            radioButton3.Name = "radioButton3";
-            radioButton3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(m_radioButtonHigh, "m_radioButtonHigh");
+            m_radioButtonHigh.Name = "m_radioButtonHigh";
+            m_radioButtonHigh.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // m_radioButtonMedium
             // 
-            resources.ApplyResources(radioButton2, "radioButton2");
-            radioButton2.Name = "radioButton2";
-            radioButton2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(m_radioButtonMedium, "m_radioButtonMedium");
+            m_radioButtonMedium.Name = "m_radioButtonMedium";
+            m_radioButtonMedium.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // m_radioButtonLow
             // 
-            resources.ApplyResources(radioButton1, "radioButton1");
-            radioButton1.Checked = true;
-            radioButton1.Name = "radioButton1";
-            radioButton1.TabStop = true;
-            radioButton1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(m_radioButtonLow, "m_radioButtonLow");
+            m_radioButtonLow.Checked = true;
+            m_radioButtonLow.Name = "m_radioButtonLow";
+            m_radioButtonLow.TabStop = true;
+            m_radioButtonLow.UseVisualStyleBackColor = true;
             // 
-            // buttonCreate
+            // m_btAccept
             // 
-            resources.ApplyResources(buttonCreate, "buttonCreate");
-            buttonCreate.Name = "buttonCreate";
-            buttonCreate.UseVisualStyleBackColor = true;
-            buttonCreate.Click += buttonCreate_Click;
+            resources.ApplyResources(m_btAccept, "m_btAccept");
+            m_btAccept.Name = "m_btAccept";
+            m_btAccept.UseVisualStyleBackColor = true;
+            m_btAccept.Click += buttonCreate_Click;
             // 
             // groupBox4
             // 
@@ -488,12 +489,12 @@
             splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer7).EndInit();
             splitContainer7.ResumeLayout(false);
-            groupBoxPlacement.ResumeLayout(false);
-            groupBoxPlacement.PerformLayout();
-            groupBoxSize.ResumeLayout(false);
-            groupBoxSize.PerformLayout();
-            groupBoxNutrition.ResumeLayout(false);
-            groupBoxNutrition.PerformLayout();
+            m_gBPlacement.ResumeLayout(false);
+            m_gBPlacement.PerformLayout();
+            m_gBSize.ResumeLayout(false);
+            m_gBSize.PerformLayout();
+            m_gBNutrition.ResumeLayout(false);
+            m_gBNutrition.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             splitContainer3.Panel1.ResumeLayout(false);
@@ -533,19 +534,19 @@
         private SplitContainer splitContainer2;
         private SplitContainer splitContainer7;
         private TextBox m_textName;
-        private Button buttonAbort;
+        private Button m_btAbort;
         private Label label1;
-        private GroupBox groupBoxPlacement;
-        private RadioButton radioButton8;
-        private RadioButton radioButton9;
-        private GroupBox groupBoxSize;
-        private TextBox textBox2;
-        private TextBox textBoxLength;
-        private GroupBox groupBoxNutrition;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private Button buttonCreate;
+        private GroupBox m_gBPlacement;
+        private RadioButton m_rBInside;
+        private RadioButton m_rBOutside;
+        private GroupBox m_gBSize;
+        private TextBox m_textBoxWidth;
+        private TextBox m_textBoxLength;
+        private GroupBox m_gBNutrition;
+        private RadioButton m_radioButtonHigh;
+        private RadioButton m_radioButtonMedium;
+        private RadioButton m_radioButtonLow;
+        private Button m_btAccept;
         private GroupBox groupBox4;
         private TextBox textBoxInfo;
         private ListBox listSelectedPlants;

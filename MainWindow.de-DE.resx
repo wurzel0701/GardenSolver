@@ -180,31 +180,22 @@
   <data name="splitContainer7.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="m_textName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 62</value>
-  </data>
   <data name="m_textName.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 23</value>
-  </data>
-  <data name="m_textName.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
   </data>
   <data name="m_textName.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="buttonAbort.Enabled" type="System.Boolean, mscorlib">
+  <data name="m_btAbort.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="buttonAbort.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="m_btAbort.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="buttonAbort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 398</value>
-  </data>
-  <data name="buttonAbort.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_btAbort.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 31</value>
   </data>
-  <data name="buttonAbort.Text" xml:space="preserve">
+  <data name="m_btAbort.Text" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
@@ -228,47 +219,56 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Beet erstellen</value>
   </data>
-  <data name="groupBoxPlacement.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="m_gBPlacement.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 274</value>
   </data>
-  <data name="groupBoxPlacement.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_gBPlacement.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 71</value>
   </data>
-  <data name="groupBoxPlacement.Text" xml:space="preserve">
+  <data name="m_gBPlacement.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="m_gBPlacement.Text" xml:space="preserve">
     <value>Standort</value>
   </data>
-  <data name="groupBoxSize.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="m_gBSize.Location" type="System.Drawing.Point, System.Drawing">
     <value>38, 185</value>
   </data>
-  <data name="groupBoxSize.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_gBSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 83</value>
   </data>
-  <data name="groupBoxSize.Text" xml:space="preserve">
+  <data name="m_gBSize.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="m_gBSize.Text" xml:space="preserve">
     <value>Größe</value>
   </data>
-  <data name="groupBoxNutrition.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 91</value>
-  </data>
-  <data name="groupBoxNutrition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 88</value>
-  </data>
-  <data name="groupBoxNutrition.Text" xml:space="preserve">
-    <value>Planzentyp</value>
-  </data>
-  <data name="buttonCreate.Enabled" type="System.Boolean, mscorlib">
+  <data name="m_gBNutrition.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="buttonCreate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="m_gBNutrition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 91</value>
+  </data>
+  <data name="m_gBNutrition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 88</value>
+  </data>
+  <data name="m_gBNutrition.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="m_gBNutrition.Text" xml:space="preserve">
+    <value>Planzentyp</value>
+  </data>
+  <data name="m_btAccept.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_btAccept.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="buttonCreate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 351</value>
-  </data>
-  <data name="buttonCreate.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_btAccept.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 41</value>
   </data>
-  <data name="buttonCreate.Text" xml:space="preserve">
-    <value>Beet erstellen</value>
+  <data name="m_btAccept.Text" xml:space="preserve">
+    <value>Übernehmen</value>
   </data>
   <data name="groupBox4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -339,34 +339,34 @@
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>518</value>
   </data>
-  <data name="radioButton8.AutoSize" type="System.Boolean, mscorlib">
+  <data name="m_rBInside.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radioButton8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="m_rBInside.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="radioButton8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="m_rBInside.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="radioButton8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_rBInside.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 19</value>
   </data>
-  <data name="radioButton8.Text" xml:space="preserve">
+  <data name="m_rBInside.Text" xml:space="preserve">
     <value>Gewächshaus</value>
   </data>
-  <data name="radioButton9.AutoSize" type="System.Boolean, mscorlib">
+  <data name="m_rBOutside.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radioButton9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="m_rBOutside.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="radioButton9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="m_rBOutside.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="radioButton9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_rBOutside.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 19</value>
   </data>
-  <data name="radioButton9.Text" xml:space="preserve">
+  <data name="m_rBOutside.Text" xml:space="preserve">
     <value>Außenbeet</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -390,67 +390,55 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Länge</value>
   </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 42</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_textBoxWidth.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 23</value>
   </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="textBoxLength.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 19</value>
-  </data>
-  <data name="textBoxLength.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_textBoxLength.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 23</value>
   </data>
-  <data name="radioButton3.AutoSize" type="System.Boolean, mscorlib">
+  <data name="m_radioButtonHigh.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radioButton3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="m_radioButtonHigh.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="radioButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="m_radioButtonHigh.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_radioButtonHigh.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 19</value>
   </data>
-  <data name="radioButton3.Text" xml:space="preserve">
+  <data name="m_radioButtonHigh.Text" xml:space="preserve">
     <value>Starkzehrer</value>
   </data>
-  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="m_radioButtonMedium.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radioButton2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="m_radioButtonMedium.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="radioButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="m_radioButtonMedium.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_radioButtonMedium.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 19</value>
   </data>
-  <data name="radioButton2.Text" xml:space="preserve">
+  <data name="m_radioButtonMedium.Text" xml:space="preserve">
     <value>Mittelzehrer</value>
   </data>
-  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="m_radioButtonLow.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radioButton1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="m_radioButtonLow.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="radioButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="m_radioButtonLow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 19</value>
-  </data>
-  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_radioButtonLow.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 19</value>
   </data>
-  <data name="radioButton1.Text" xml:space="preserve">
+  <data name="m_radioButtonLow.Text" xml:space="preserve">
     <value>Schwachzehrer</value>
   </data>
   <data name="textBoxInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
