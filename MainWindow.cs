@@ -12,13 +12,13 @@ namespace GardenSolver
 {
     public partial class MainWindow : Form
     {
-        private List<string> m_availablePlants = new List<string>();
-
-        private List<string> m_selectedPlants = new List<string>();
-
         private List<Planter> m_createdPlanters = new List<Planter> { };
 
-        private Planter? m_currentSelected = null;
+        private Planter? m_currentPlanter = null;
+
+        private NutritionRequirementsEnum m_currentNutrition = NutritionRequirementsEnum.UNSET;
+
+        private List<string> m_currentPlants = new List<string>();
 
         public MainWindow()
         {
@@ -28,129 +28,69 @@ namespace GardenSolver
             ClearWindow();
         }
 
-        private void UpdatePlantTypeList()
+        private void UpdatePlantTypeList(bool keepSelection = true)
         {
+            if (m_currentPlanter == null)
+            {
+                return;
+            }
+
+            string filterString = textBoxPlantSearch.Text.ToLower();
+
+            if (!keepSelection)
+            {
+                m_currentPlants.Clear();
+            }
 
             m_listPlantTypeView.Items.Clear();
             ListViewItem listViewItem;
             foreach (string plant in PlantTypeLibrary.AllPlantTypeNames)
             {
+                if (filterString.Length > 0 && !(plant.ToLower().Contains(filterString)))
+                {
+                    //textBoxInfo.AppendText("Skipping plant " + plant + "\r\n");
+                    continue;
+                }
+
                 listViewItem = new ListViewItem(plant);
 
                 PlantType plantType = PlantTypeLibrary.GetPlantTypeOfName(plant);
 
-                
+
                 listViewItem.SubItems.Add(plantType.NutritionRequirements.ToString());
                 listViewItem.SubItems.Add(plantType.PlantFamily.ToString());
+
+                if ((int)plantType.NutritionRequirements > (int)m_currentNutrition)
+                {
+                    listViewItem.ForeColor = Color.LightGray;
+                    listViewItem.BackColor = Color.Gray;
+                    listViewItem.UseItemStyleForSubItems = true;
+                    listViewItem.Tag = false;
+                }
+                else
+                {
+                    listViewItem.Tag = true;
+                    if (keepSelection && m_currentPlants.Contains(plant))
+                    {
+                        listViewItem.Checked = true;
+                    }
+                }
 
                 m_listPlantTypeView.Items.Add(listViewItem);
             }
 
         }
 
-        /*
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (listAvailablePlants.SelectedIndex != -1)
-            {
-                //Transfer available to selected
-                object item = listAvailablePlants.Items[listAvailablePlants.SelectedIndex];
-                listAvailablePlants.Items.RemoveAt(listAvailablePlants.SelectedIndex);
-                listSelectedPlants.Items.Add(item);
-                m_availablePlants.Remove((string)item);
-                m_selectedPlants.Add((string)item);
-            }
-
-            if (listSelectedPlants.SelectedIndex != -1)
-            {
-                //Transfer selected to available
-                object item = listSelectedPlants.Items[listSelectedPlants.SelectedIndex];
-                listSelectedPlants.Items.RemoveAt(listSelectedPlants.SelectedIndex);
-                listAvailablePlants.Items.Add(item);
-                m_selectedPlants.Remove((string)item);
-                m_availablePlants.Add((string)item);
-            }
-
-            listSelectedPlants.SelectedItems.Clear();
-            listAvailablePlants.SelectedItems.Clear();
-
-            listSelectedPlants.Sorted = true;
-            listAvailablePlants.Sorted = true;
-
-            buttonChoose.Enabled = false;
-        }
-        */
-        /*
-        private void listAvailablePlants_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listAvailablePlants.SelectedIndex != -1)
-            {
-                listSelectedPlants.SelectedItems.Clear();
-                buttonChoose.Enabled = true;
-                buttonChoose.Text = "Auswählen";
-            }
-        }
-
-        private void listSelectedPlants_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listSelectedPlants.SelectedIndex != -1)
-            {
-                listAvailablePlants.SelectedItems.Clear();
-                buttonChoose.Enabled = true;
-                buttonChoose.Text = "Entfernen";
-            }
-        }
-        */
-
         private void textBoxPlantSearch_TextChanged(object sender, EventArgs e)
         {
-            //textBoxInfo.AppendText("New text is " + textBoxPlantSearch.Text + "\r\n");
+            if (sender is not TextBox)
+            {
+                return;
+            }
+
+            textBoxInfo.AppendText("New text is " + textBoxPlantSearch.Text + "\r\n");
             string filter = textBoxPlantSearch.Text.ToLower();
-
-            /*
-            if (filter == string.Empty)
-            {
-                //Allow all
-                listAvailablePlants.Items.Clear();
-                foreach (string plant in m_availablePlants)
-                {
-                    listAvailablePlants.Items.Add(plant);
-                }
-
-                listSelectedPlants.Items.Clear();
-                foreach (string plant in m_selectedPlants)
-                {
-                    listSelectedPlants.Items.Add(plant);
-                }
-
-                listAvailablePlants.Sorted = true;
-                listSelectedPlants.Sorted = true;
-            }
-            else
-            {
-                //Filter for plant
-                listAvailablePlants.Items.Clear();
-                foreach (string plant in m_availablePlants)
-                {
-                    if (plant.ToLower().Contains(filter))
-                    {
-                        listAvailablePlants.Items.Add(plant);
-                    }
-                }
-
-                listSelectedPlants.Items.Clear();
-                foreach (string plant in m_selectedPlants)
-                {
-                    if (plant.ToLower().Contains(filter))
-                    {
-                        listSelectedPlants.Items.Add(plant);
-                    }
-                }
-
-                listAvailablePlants.Sorted = true;
-                listSelectedPlants.Sorted = true;
-            }
-            */
+            UpdatePlantTypeList(true);
         }
 
         private void buttonCreate_Click(object sender, EventArgs e)
@@ -159,7 +99,7 @@ namespace GardenSolver
             UpdatePlanterList();
         }
 
-        private void SetupPlantTypeList() 
+        private void SetupPlantTypeList()
         {
             m_listPlantTypeView.View = View.Details;
 
@@ -217,7 +157,7 @@ namespace GardenSolver
             ClearWindow();
         }
 
-        private void ClearWindow() 
+        private void ClearWindow()
         {
             m_textName.Text = string.Empty;
             m_textName.Enabled = false;
@@ -233,38 +173,45 @@ namespace GardenSolver
             m_btAbort.Enabled = false;
 
             m_listPlantTypeView.Items.Clear();
+            textBoxPlantSearch.Enabled = false;
         }
 
         private void SavePlanterData()
         {
-            if (m_currentSelected == null)
+            if (m_currentPlanter == null)
             {
                 return;
             }
-            m_currentSelected.Name = m_textName.Text;
+            m_currentPlanter.Name = m_textName.Text;
 
-            m_currentSelected.m_length = float.Parse(m_textBoxLength.Text);
-            m_currentSelected.m_width = float.Parse(m_textBoxWidth.Text);
+            m_currentPlanter.m_length = float.Parse(m_textBoxLength.Text);
+            m_currentPlanter.m_width = float.Parse(m_textBoxWidth.Text);
 
             if (m_radioButtonLow.Checked)
             {
-                m_currentSelected.PlanterNutrition = NutritionRequirementsEnum.LOW;
+                m_currentPlanter.PlanterNutrition = NutritionRequirementsEnum.LOW;
             }
             else if (m_radioButtonMedium.Checked)
             {
-                m_currentSelected.PlanterNutrition = NutritionRequirementsEnum.MEDIUM;
+                m_currentPlanter.PlanterNutrition = NutritionRequirementsEnum.MEDIUM;
             }
-            else 
+            else
             {
-                m_currentSelected.PlanterNutrition = NutritionRequirementsEnum.HIGH;
+                m_currentPlanter.PlanterNutrition = NutritionRequirementsEnum.HIGH;
             }
 
-            m_currentSelected.IsOutside = m_rBOutside.Checked;
+            m_currentPlanter.IsOutside = m_rBOutside.Checked;
+
+            m_currentPlanter.ChoosenPlantTypes.Clear();
+            foreach (string plant in m_currentPlants) 
+            {
+                m_currentPlanter.ChoosenPlantTypes.Add(plant);
+            }
         }
 
         private void ShowPlanterData()
         {
-            if (m_currentSelected == null) 
+            if (m_currentPlanter == null)
             {
                 return;
             }
@@ -277,24 +224,27 @@ namespace GardenSolver
             m_radioButtonLow.Enabled = true;
             m_radioButtonMedium.Enabled = true;
 
-            m_textName.Text = m_currentSelected.Name;
-            switch (m_currentSelected.PlanterNutrition)
+            m_textName.Text = m_currentPlanter.Name;
+            switch (m_currentPlanter.PlanterNutrition)
             {
                 case NutritionRequirementsEnum.LOW:
                     m_radioButtonLow.Checked = true;
+                    m_currentNutrition = NutritionRequirementsEnum.LOW;
                     break;
                 case NutritionRequirementsEnum.MEDIUM:
                     m_radioButtonMedium.Checked = true;
+                    m_currentNutrition = NutritionRequirementsEnum.MEDIUM;
                     break;
                 case NutritionRequirementsEnum.HIGH:
                     m_radioButtonHigh.Checked = true;
+                    m_currentNutrition = NutritionRequirementsEnum.HIGH;
                     break;
             }
 
-            foreach (string selected in m_currentSelected.ChoosenPlantTypes) 
+            foreach (string selected in m_currentPlanter.ChoosenPlantTypes)
             {
                 PlantType type = PlantTypeLibrary.GetPlantTypeOfName(selected);
-                if (type != null) 
+                if (type != null)
                 {
                     if (type.NutritionRequirements == NutritionRequirementsEnum.MEDIUM)
                     {
@@ -307,13 +257,13 @@ namespace GardenSolver
                         break;
                     }
                 }
-                
+
             }
 
-            m_textBoxLength.Text = m_currentSelected.m_length.ToString();
-            m_textBoxWidth.Text = m_currentSelected.m_width.ToString();
+            m_textBoxLength.Text = m_currentPlanter.m_length.ToString();
+            m_textBoxWidth.Text = m_currentPlanter.m_width.ToString();
 
-            if (m_currentSelected.IsOutside)
+            if (m_currentPlanter.IsOutside)
             {
                 m_rBOutside.Checked = true;
             }
@@ -325,6 +275,13 @@ namespace GardenSolver
             m_btAbort.Enabled = true;
             m_btAccept.Enabled = true;
 
+            m_currentPlants.Clear();
+            foreach (string selected in m_currentPlanter.ChoosenPlantTypes) 
+            {
+                m_currentPlants.Add(selected);
+            }
+
+            textBoxPlantSearch.Enabled = true;
             UpdatePlantTypeList();
         }
 
@@ -333,12 +290,12 @@ namespace GardenSolver
             if (listPlanters.SelectedIndices.Count == 0)
             {
                 m_deleteButton.Enabled = false;
-                m_currentSelected = null;
+                m_currentPlanter = null;
                 ClearWindow();
                 return;
             }
             int selectedIndex = listPlanters.SelectedIndices[0];
-            m_currentSelected = m_createdPlanters[selectedIndex];
+            m_currentPlanter = m_createdPlanters[selectedIndex];
             ShowPlanterData();
             m_deleteButton.Enabled = true;
         }
@@ -366,6 +323,65 @@ namespace GardenSolver
         private void m_btAbort_Click(object sender, EventArgs e)
         {
             ShowPlanterData();
+        }
+
+        private void OnNutritionChange(object sender, EventArgs e)
+        {
+            //Button changed by script
+            RadioButton? rb = sender as RadioButton;
+
+            if (rb == null)
+            {
+                return;
+            }
+
+            if (rb.Checked)
+            {
+                switch (rb.Tag)
+                {
+                    case "LOW":
+                        m_currentNutrition = NutritionRequirementsEnum.LOW;
+                        break;
+                    case "MEDIUM":
+                        m_currentNutrition = NutritionRequirementsEnum.MEDIUM;
+                        break;
+                    case "HIGH":
+                        m_currentNutrition = NutritionRequirementsEnum.HIGH;
+                        break;
+                    default:
+                        throw new Exception("The tag " + rb.Tag + " is undefined");
+                }
+
+                UpdatePlantTypeList(true);
+            }
+
+
+        }
+
+        private void m_listPlantTypeView_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (m_listPlantTypeView.Items[e.Index].Tag == null)
+            {
+                throw new Exception("The tag is not filled for this object, aborting");
+            }
+
+            bool available = (bool)m_listPlantTypeView.Items[e.Index].Tag;
+            if (!available)
+            {
+                e.NewValue = e.CurrentValue;
+            }
+        }
+
+        private void m_listPlantTypeView_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            if (e.Item.Checked)
+            {
+                m_currentPlants.Add(e.Item.Text);
+            }
+            else 
+            {
+                m_currentPlants.Remove(e.Item.Text);
+            }
         }
     }
 }

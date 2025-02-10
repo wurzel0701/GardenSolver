@@ -54,6 +54,7 @@
             m_btAccept = new Button();
             groupBox4 = new GroupBox();
             textBoxInfo = new TextBox();
+            m_listPlantTypeView = new ListView();
             label5 = new Label();
             textBoxPlantSearch = new TextBox();
             splitContainer3 = new SplitContainer();
@@ -73,7 +74,6 @@
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             debugWindowToolStripMenuItem = new ToolStripMenuItem();
-            m_listPlantTypeView = new ListView();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -269,13 +269,17 @@
             // 
             resources.ApplyResources(m_radioButtonHigh, "m_radioButtonHigh");
             m_radioButtonHigh.Name = "m_radioButtonHigh";
+            m_radioButtonHigh.Tag = "HIGH";
             m_radioButtonHigh.UseVisualStyleBackColor = true;
+            m_radioButtonHigh.CheckedChanged += OnNutritionChange;
             // 
             // m_radioButtonMedium
             // 
             resources.ApplyResources(m_radioButtonMedium, "m_radioButtonMedium");
             m_radioButtonMedium.Name = "m_radioButtonMedium";
+            m_radioButtonMedium.Tag = "MEDIUM";
             m_radioButtonMedium.UseVisualStyleBackColor = true;
+            m_radioButtonMedium.CheckedChanged += OnNutritionChange;
             // 
             // m_radioButtonLow
             // 
@@ -283,7 +287,9 @@
             m_radioButtonLow.Checked = true;
             m_radioButtonLow.Name = "m_radioButtonLow";
             m_radioButtonLow.TabStop = true;
+            m_radioButtonLow.Tag = "LOW";
             m_radioButtonLow.UseVisualStyleBackColor = true;
+            m_radioButtonLow.CheckedChanged += OnNutritionChange;
             // 
             // m_btAccept
             // 
@@ -303,6 +309,15 @@
             // 
             resources.ApplyResources(textBoxInfo, "textBoxInfo");
             textBoxInfo.Name = "textBoxInfo";
+            textBoxInfo.ReadOnly = true;
+            // 
+            // m_listPlantTypeView
+            // 
+            resources.ApplyResources(m_listPlantTypeView, "m_listPlantTypeView");
+            m_listPlantTypeView.Name = "m_listPlantTypeView";
+            m_listPlantTypeView.UseCompatibleStateImageBehavior = false;
+            m_listPlantTypeView.ItemCheck += m_listPlantTypeView_ItemCheck;
+            m_listPlantTypeView.ItemChecked += m_listPlantTypeView_ItemChecked;
             // 
             // label5
             // 
@@ -437,12 +452,6 @@
             // 
             resources.ApplyResources(debugWindowToolStripMenuItem, "debugWindowToolStripMenuItem");
             debugWindowToolStripMenuItem.Name = "debugWindowToolStripMenuItem";
-            // 
-            // m_listPlantTypeView
-            // 
-            resources.ApplyResources(m_listPlantTypeView, "m_listPlantTypeView");
-            m_listPlantTypeView.Name = "m_listPlantTypeView";
-            m_listPlantTypeView.UseCompatibleStateImageBehavior = false;
             // 
             // MainWindow
             // 
