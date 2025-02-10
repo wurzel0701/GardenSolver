@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace GardenSolver
 {
-    internal class Planter
+    internal class Planter(NutritionRequirementsEnum planterNutrition, string name, bool isOutside, float width, float length)
     {
-        public NutritionRequirementsEnum PlanterNutrition { get; private set; }
+        public string Name { get; set; } = name;
 
-        public bool HasRoof { get; private set; }
+        public NutritionRequirementsEnum PlanterNutrition { get; set; } = planterNutrition;
 
-        private List<string> ChoosenPlantTypes;
+        public bool IsOutside { get; set; } = isOutside;
+
+        public int PlantAmount => ChoosenPlantTypes.Count;
+
+        public List<string> ChoosenPlantTypes = new List<string>();
 
         private Dictionary<string, short> PlantTypeRating = new Dictionary<string, short>();
 
@@ -20,15 +24,13 @@ namespace GardenSolver
 
         private Dictionary<string, short> SuggestionRating = new Dictionary<string, short>();
 
-        private short[,] CompatMatrix;
+        private short[,] CompatMatrix = new short[0, 0];
 
         private short PlanterRating = 0;
 
+        public float m_width = width;
 
-        public Planter(NutritionRequirementsEnum planterNutrition) 
-        {
-            PlanterNutrition = planterNutrition;
-        }
+        public float m_length = length;
 
         public short CheckCompatibilityOf(string plantType) 
         {
@@ -63,9 +65,10 @@ namespace GardenSolver
 
         public void SetChoosenPlantTypes(List<string> choosen) 
         {
-            ChoosenPlantTypes = choosen;
+            ChoosenPlantTypes.Clear();
+            ChoosenPlantTypes.AddRange(choosen);
             CalculateCompatibilityMatrix();
-            CalculateSuggestions();
+            //CalculateSuggestions();
         }
 
         private void CalculateCompatibilityMatrix() 
@@ -96,7 +99,7 @@ namespace GardenSolver
 
         }
 
-        private void CalculateSuggestions()
+        public void CalculateSuggestions()
         {
             foreach (string name in PlantTypeLibrary.AllPlantTypeNames) 
             {
