@@ -55,9 +55,6 @@
             groupBox4 = new GroupBox();
             textBoxInfo = new TextBox();
             label5 = new Label();
-            listSelectedPlants = new ListBox();
-            buttonChoose = new Button();
-            listAvailablePlants = new ListBox();
             textBoxPlantSearch = new TextBox();
             splitContainer3 = new SplitContainer();
             splitContainer4 = new SplitContainer();
@@ -76,6 +73,7 @@
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             debugWindowToolStripMenuItem = new ToolStripMenuItem();
+            m_listPlantTypeView = new ListView();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -164,10 +162,8 @@
             // splitContainer2.Panel2
             // 
             resources.ApplyResources(splitContainer2.Panel2, "splitContainer2.Panel2");
+            splitContainer2.Panel2.Controls.Add(m_listPlantTypeView);
             splitContainer2.Panel2.Controls.Add(label5);
-            splitContainer2.Panel2.Controls.Add(listSelectedPlants);
-            splitContainer2.Panel2.Controls.Add(buttonChoose);
-            splitContainer2.Panel2.Controls.Add(listAvailablePlants);
             splitContainer2.Panel2.Controls.Add(textBoxPlantSearch);
             // 
             // splitContainer7
@@ -313,27 +309,6 @@
             resources.ApplyResources(label5, "label5");
             label5.Name = "label5";
             // 
-            // listSelectedPlants
-            // 
-            resources.ApplyResources(listSelectedPlants, "listSelectedPlants");
-            listSelectedPlants.FormattingEnabled = true;
-            listSelectedPlants.Name = "listSelectedPlants";
-            listSelectedPlants.SelectedIndexChanged += listSelectedPlants_SelectedIndexChanged;
-            // 
-            // buttonChoose
-            // 
-            resources.ApplyResources(buttonChoose, "buttonChoose");
-            buttonChoose.Name = "buttonChoose";
-            buttonChoose.UseVisualStyleBackColor = true;
-            buttonChoose.Click += button2_Click;
-            // 
-            // listAvailablePlants
-            // 
-            resources.ApplyResources(listAvailablePlants, "listAvailablePlants");
-            listAvailablePlants.FormattingEnabled = true;
-            listAvailablePlants.Name = "listAvailablePlants";
-            listAvailablePlants.SelectedIndexChanged += listAvailablePlants_SelectedIndexChanged;
-            // 
             // textBoxPlantSearch
             // 
             resources.ApplyResources(textBoxPlantSearch, "textBoxPlantSearch");
@@ -463,6 +438,12 @@
             resources.ApplyResources(debugWindowToolStripMenuItem, "debugWindowToolStripMenuItem");
             debugWindowToolStripMenuItem.Name = "debugWindowToolStripMenuItem";
             // 
+            // m_listPlantTypeView
+            // 
+            resources.ApplyResources(m_listPlantTypeView, "m_listPlantTypeView");
+            m_listPlantTypeView.Name = "m_listPlantTypeView";
+            m_listPlantTypeView.UseCompatibleStateImageBehavior = false;
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
@@ -549,9 +530,6 @@
         private Button m_btAccept;
         private GroupBox groupBox4;
         private TextBox textBoxInfo;
-        private ListBox listSelectedPlants;
-        private Button buttonChoose;
-        private ListBox listAvailablePlants;
         private TextBox textBoxPlantSearch;
         private Label label2;
         private ListView listPlanters;
@@ -566,5 +544,6 @@
         private Button m_newButton;
         private Button m_deleteButton;
         private Label label5;
+        private ListView m_listPlantTypeView;
     }
 }

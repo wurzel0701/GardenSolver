@@ -219,126 +219,6 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Beet erstellen</value>
   </data>
-  <data name="m_gBPlacement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 274</value>
-  </data>
-  <data name="m_gBPlacement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 71</value>
-  </data>
-  <data name="m_gBPlacement.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="m_gBPlacement.Text" xml:space="preserve">
-    <value>Standort</value>
-  </data>
-  <data name="m_gBSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 185</value>
-  </data>
-  <data name="m_gBSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 83</value>
-  </data>
-  <data name="m_gBSize.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="m_gBSize.Text" xml:space="preserve">
-    <value>Größe</value>
-  </data>
-  <data name="m_gBNutrition.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="m_gBNutrition.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 91</value>
-  </data>
-  <data name="m_gBNutrition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 88</value>
-  </data>
-  <data name="m_gBNutrition.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="m_gBNutrition.Text" xml:space="preserve">
-    <value>Planzentyp</value>
-  </data>
-  <data name="m_btAccept.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="m_btAccept.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="m_btAccept.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 41</value>
-  </data>
-  <data name="m_btAccept.Text" xml:space="preserve">
-    <value>Übernehmen</value>
-  </data>
-  <data name="groupBox4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 143</value>
-  </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Info</value>
-  </data>
-  <data name="splitContainer7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 595</value>
-  </data>
-  <data name="splitContainer7.SplitterDistance" type="System.Int32, mscorlib">
-    <value>448</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 15</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Suche</value>
-  </data>
-  <data name="listSelectedPlants.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="listSelectedPlants.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 358</value>
-  </data>
-  <data name="listSelectedPlants.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 229</value>
-  </data>
-  <data name="buttonChoose.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="buttonChoose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 317</value>
-  </data>
-  <data name="buttonChoose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 35</value>
-  </data>
-  <data name="buttonChoose.Text" xml:space="preserve">
-    <value>Auswählen</value>
-  </data>
-  <data name="listAvailablePlants.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="listAvailablePlants.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 244</value>
-  </data>
-  <data name="textBoxPlantSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 28</value>
-  </data>
-  <data name="textBoxPlantSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 23</value>
-  </data>
-  <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>728, 595</value>
-  </data>
-  <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
-    <value>264</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1250, 595</value>
-  </data>
-  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>518</value>
-  </data>
   <data name="m_rBInside.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -369,6 +249,12 @@
   <data name="m_rBOutside.Text" xml:space="preserve">
     <value>Außenbeet</value>
   </data>
+  <data name="m_gBPlacement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 71</value>
+  </data>
+  <data name="m_gBPlacement.Text" xml:space="preserve">
+    <value>Standort</value>
+  </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -395,6 +281,12 @@
   </data>
   <data name="m_textBoxLength.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 23</value>
+  </data>
+  <data name="m_gBSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 83</value>
+  </data>
+  <data name="m_gBSize.Text" xml:space="preserve">
+    <value>Größe</value>
   </data>
   <data name="m_radioButtonHigh.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -441,6 +333,27 @@
   <data name="m_radioButtonLow.Text" xml:space="preserve">
     <value>Schwachzehrer</value>
   </data>
+  <data name="m_gBNutrition.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_gBNutrition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 88</value>
+  </data>
+  <data name="m_gBNutrition.Text" xml:space="preserve">
+    <value>Planzentyp</value>
+  </data>
+  <data name="m_btAccept.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_btAccept.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_btAccept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 41</value>
+  </data>
+  <data name="m_btAccept.Text" xml:space="preserve">
+    <value>Übernehmen</value>
+  </data>
   <data name="textBoxInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -449,6 +362,57 @@
   </data>
   <data name="textBoxInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 121</value>
+  </data>
+  <data name="groupBox4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 143</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="splitContainer7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 595</value>
+  </data>
+  <data name="splitContainer7.SplitterDistance" type="System.Int32, mscorlib">
+    <value>448</value>
+  </data>
+  <data name="m_listPlantTypeView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 64</value>
+  </data>
+  <data name="m_listPlantTypeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>409, 516</value>
+  </data>
+  <data name="m_listPlantTypeView.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 15</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Suche</value>
+  </data>
+  <data name="textBoxPlantSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 28</value>
+  </data>
+  <data name="textBoxPlantSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>333, 23</value>
+  </data>
+  <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>728, 595</value>
+  </data>
+  <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
+    <value>264</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1250, 595</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>518</value>
   </data>
   <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -522,12 +486,6 @@
   <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
     <value>932</value>
   </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 629</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabDefinePlanter.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -559,11 +517,11 @@
   <data name="tabSuggestions.Text" xml:space="preserve">
     <value>Anbauplan</value>
   </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 22</value>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 629</value>
   </data>
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
     <value>Status</value>
@@ -574,20 +532,26 @@
   <data name="toolStripProgressBar1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 24</value>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 22</value>
   </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>Menu</value>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
   </data>
   <data name="debugWindowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 22</value>
   </data>
   <data name="debugWindowToolStripMenuItem.Text" xml:space="preserve">
     <value>Debug Window</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 24</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

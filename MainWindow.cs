@@ -24,31 +24,31 @@ namespace GardenSolver
         {
             InitializeComponent();
             SetupPlanterList();
+            SetupPlantTypeList();
             ClearWindow();
         }
 
-        private void FillBoxes()
+        private void UpdatePlantTypeList()
         {
 
-            listAvailablePlants.Items.Clear();
-            //ListViewItem listViewItem;
+            m_listPlantTypeView.Items.Clear();
+            ListViewItem listViewItem;
             foreach (string plant in PlantTypeLibrary.AllPlantTypeNames)
             {
-                //listViewItem = new ListViewItem(plant);
+                listViewItem = new ListViewItem(plant);
 
-                //PlantType plantType = PlantTypeLibrary.GetPlantTypeOfName(plant);
+                PlantType plantType = PlantTypeLibrary.GetPlantTypeOfName(plant);
 
-                //listViewItem.SubItems.Add(plantType.PlantFamily.ToString());
-                //listViewItem.SubItems.Add(plantType.NutritionRequirements.ToString());
+                
+                listViewItem.SubItems.Add(plantType.NutritionRequirements.ToString());
+                listViewItem.SubItems.Add(plantType.PlantFamily.ToString());
 
-                listAvailablePlants.Items.Add(plant);
-                m_availablePlants.Add(plant);
+                m_listPlantTypeView.Items.Add(listViewItem);
             }
-
-            listSelectedPlants.Items.Clear();
 
         }
 
+        /*
         private void button2_Click(object sender, EventArgs e)
         {
             if (listAvailablePlants.SelectedIndex != -1)
@@ -79,7 +79,8 @@ namespace GardenSolver
 
             buttonChoose.Enabled = false;
         }
-
+        */
+        /*
         private void listAvailablePlants_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listAvailablePlants.SelectedIndex != -1)
@@ -99,12 +100,14 @@ namespace GardenSolver
                 buttonChoose.Text = "Entfernen";
             }
         }
+        */
 
         private void textBoxPlantSearch_TextChanged(object sender, EventArgs e)
         {
             //textBoxInfo.AppendText("New text is " + textBoxPlantSearch.Text + "\r\n");
             string filter = textBoxPlantSearch.Text.ToLower();
 
+            /*
             if (filter == string.Empty)
             {
                 //Allow all
@@ -147,12 +150,33 @@ namespace GardenSolver
                 listAvailablePlants.Sorted = true;
                 listSelectedPlants.Sorted = true;
             }
+            */
         }
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             SavePlanterData();
             UpdatePlanterList();
+        }
+
+        private void SetupPlantTypeList() 
+        {
+            m_listPlantTypeView.View = View.Details;
+
+            m_listPlantTypeView.View = View.Details;
+            m_listPlantTypeView.GridLines = true;
+            m_listPlantTypeView.LabelEdit = false;
+            m_listPlantTypeView.AllowColumnReorder = false;
+            m_listPlantTypeView.MultiSelect = false;
+            m_listPlantTypeView.FullRowSelect = true;
+            m_listPlantTypeView.CheckBoxes = true;
+
+            Size listSize = m_listPlantTypeView.Size;
+            int sizeSplit = ((listSize.Width - 4 - SystemInformation.VerticalScrollBarWidth) / 7);
+            m_listPlantTypeView.Columns.Clear();
+            m_listPlantTypeView.Columns.Add("Name", sizeSplit * 3, HorizontalAlignment.Center);
+            m_listPlantTypeView.Columns.Add("Nährstoffe", sizeSplit * 2, HorizontalAlignment.Center);
+            m_listPlantTypeView.Columns.Add("Familie", sizeSplit * 2, HorizontalAlignment.Center);
         }
 
         private void SetupPlanterList()
@@ -165,12 +189,12 @@ namespace GardenSolver
             listPlanters.FullRowSelect = true;
 
             Size listSize = listPlanters.Size;
-            int sizeSplit = (listSize.Width / 9);
+            int sizeSplit = ((listSize.Width - 4 - SystemInformation.VerticalScrollBarWidth) / 9);
             listPlanters.Columns.Clear();
             listPlanters.Columns.Add("Name", sizeSplit * 3, HorizontalAlignment.Center);
             listPlanters.Columns.Add("Nährstoffe", sizeSplit * 2, HorizontalAlignment.Center);
             listPlanters.Columns.Add("Größe", sizeSplit * 2, HorizontalAlignment.Center);
-            listPlanters.Columns.Add("#Pflanzen", -2, HorizontalAlignment.Center);
+            listPlanters.Columns.Add("#Pflanzen", sizeSplit * 2, HorizontalAlignment.Center);
 
             UpdatePlanterList();
         }
@@ -207,6 +231,8 @@ namespace GardenSolver
 
             m_btAccept.Enabled = false;
             m_btAbort.Enabled = false;
+
+            m_listPlantTypeView.Items.Clear();
         }
 
         private void SavePlanterData()
@@ -298,6 +324,8 @@ namespace GardenSolver
 
             m_btAbort.Enabled = true;
             m_btAccept.Enabled = true;
+
+            UpdatePlantTypeList();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
