@@ -393,6 +393,8 @@
             tabControl1.Controls.Add(tabSuggestions);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
+            tabControl1.Selecting += tabControl1_Selecting;
             // 
             // tabDefinePlanter
             // 

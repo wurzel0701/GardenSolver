@@ -23,9 +23,7 @@ namespace GardenSolver
         public MainWindow()
         {
             InitializeComponent();
-            SetupPlanterList();
-            SetupPlantTypeList();
-            ClearWindow();
+            tabControl1_SelectedIndexChanged(null, null);
         }
 
         private void UpdatePlantTypeList(bool keepSelection = true)
@@ -203,7 +201,7 @@ namespace GardenSolver
             m_currentPlanter.IsOutside = m_rBOutside.Checked;
 
             m_currentPlanter.ChoosenPlantTypes.Clear();
-            foreach (string plant in m_currentPlants) 
+            foreach (string plant in m_currentPlants)
             {
                 m_currentPlanter.ChoosenPlantTypes.Add(plant);
             }
@@ -276,7 +274,7 @@ namespace GardenSolver
             m_btAccept.Enabled = true;
 
             m_currentPlants.Clear();
-            foreach (string selected in m_currentPlanter.ChoosenPlantTypes) 
+            foreach (string selected in m_currentPlanter.ChoosenPlantTypes)
             {
                 m_currentPlants.Add(selected);
             }
@@ -378,9 +376,45 @@ namespace GardenSolver
             {
                 m_currentPlants.Add(e.Item.Text);
             }
-            else 
+            else
             {
                 m_currentPlants.Remove(e.Item.Text);
+            }
+        }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            switch (e.TabPageIndex)
+            {
+                case 0:
+                    //This is always ok to go here
+                    break;
+                case 1:
+                    if (m_createdPlanters.Count == 0)
+                    {
+                        e.Cancel = true;
+                    }
+                    break;
+                default:
+                    e.Cancel = true;
+                    break;
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControl1.SelectedIndex) 
+            {
+                case 0:
+                    SetupPlanterList();
+                    SetupPlantTypeList();
+                    ClearWindow();
+                    break;
+                case 1:
+                    break;
+                default:
+                    break;
+
             }
         }
     }
