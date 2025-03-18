@@ -401,6 +401,11 @@ namespace GardenSolver
             }
         }
 
+        private void CalculateAllSuggestions() 
+        {
+            List<PlanterSuggestion> suggestions = null;
+        }
+
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (tabControl1.SelectedIndex) 
@@ -411,6 +416,7 @@ namespace GardenSolver
                     ClearWindow();
                     break;
                 case 1:
+                    CalculateAllSuggestions();
                     break;
                 default:
                     break;

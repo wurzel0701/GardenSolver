@@ -99,7 +99,7 @@ namespace GardenSolver
 
         }
 
-        public void CalculateSuggestions()
+        public List<PlanterSuggestion> CalculateSuggestions(int maxAmount)
         {
             foreach (string name in PlantTypeLibrary.AllPlantTypeNames) 
             {
@@ -114,10 +114,13 @@ namespace GardenSolver
 
             SuggestedPlants.Sort( (x, y) => (SuggestionRating[y].CompareTo(SuggestionRating[x])));
 
-            for (int i = 0; i < Math.Min(5, SuggestedPlants.Count); i++) 
+            List<PlanterSuggestion> suggestions = new List<PlanterSuggestion>();
+            for (int i = 0; i < Math.Min(maxAmount, SuggestedPlants.Count); i++) 
             {
-                Console.WriteLine("Suggesting " + SuggestedPlants[i] + " with rating change of " + SuggestionRating[SuggestedPlants[i]]);
+                suggestions.Add(new PlanterSuggestion(this, SuggestedPlants[i], SuggestionRating[SuggestedPlants[i]]));
             }
+
+            return suggestions;
         }
     }
 }
